@@ -61,7 +61,7 @@ with g1:
         }))
     fig.update_layout(height=230, margin=dict(l=25, r=25, t=45, b=5),
                       paper_bgcolor="rgba(0,0,0,0)", font_color="#c9d1d9")
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 with g2:
     st.subheader("📋 What to do today")
@@ -121,7 +121,7 @@ for t, (lo, hi) in TOPIC_WEIGHTS.items():
     })
 df = pd.DataFrame(rows)
 st.dataframe(
-    df, hide_index=True, use_container_width=True,
+    df, hide_index=True, width="stretch",
     column_config={
         "FSRS maturity": st.column_config.ProgressColumn(format="percent", min_value=0, max_value=1),
         "Accuracy": st.column_config.ProgressColumn(format="percent", min_value=0, max_value=1),

@@ -127,7 +127,7 @@ with tab_manage:
     else:
         df = pd.DataFrame(rows)
         edited = st.data_editor(
-            df, hide_index=True, use_container_width=True, height=430, key="mng_editor",
+            df, hide_index=True, width="stretch", height=430, key="mng_editor",
             disabled=["id", "Topic", "T", "Content", "Status", "Stab. (d)"],
             column_config={
                 "id": None,

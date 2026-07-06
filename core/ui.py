@@ -261,6 +261,26 @@ CAUSE_OPTS = {"📚 Didn't know it": "content", "👀 Misread the question": "mi
               "🧮 Calculation slip": "calc", "⏱️ Rushed / time pressure": "time"}
 
 
+def ai_explain(card, key_suffix=""):
+    """Botão opcional de explicação por IA — aparece só se ANTHROPIC_API_KEY estiver configurada."""
+    import core.ai as _ai
+    if not _ai.available():
+        return
+    k = f"aiexp_{card.get('id', '')}_{key_suffix}"
+    if st.button("🤖 Explicar em detalhes (IA)", key="b_" + k):
+        st.session_state[k] = True
+    if st.session_state.get(k):
+        with st.spinner("Gerando explicação..."):
+            txt = _ai.explain(
+                card.get("id", ""), card.get("tipo", ""),
+                card.get("frente") or card.get("enunciado") or "",
+                card.get("verso") or "", tuple(card.get("opcoes") or []),
+                card.get("correta"), card.get("explicacao") or "", card.get("topico") or "")
+        if txt:
+            with st.container(border=True):
+                st.markdown("🤖 **Explicação detalhada**\n\n" + txt)
+
+
 def run_quiz_session(store, user, key: str, mode_label: str):
     """Runs the question session stored in st.session_state[key].
 
@@ -308,6 +328,7 @@ def run_quiz_session(store, user, key: str, mode_label: str):
             st.error("❌ Incorrect.")
         answer_box(f"✅ Answer: {correta}"
                    + (f"\n\n💡 {c['explicacao']}" if c.get("explicacao") else ""))
+        ai_explain(c, key_suffix=f"{key}_{q['i']}")
 
         cause = None
         if not ok:

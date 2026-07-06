@@ -43,7 +43,7 @@ def _login_screen():
             with st.form("login_form"):
                 email = st.text_input("E-mail")
                 pw = st.text_input("Senha", type="password")
-                if st.form_submit_button("Entrar", type="primary", use_container_width=True):
+                if st.form_submit_button("Entrar", type="primary", width="stretch"):
                     user, err = auth.authenticate(store, email, pw)
                     if err:
                         st.error(err)
@@ -58,7 +58,7 @@ def _login_screen():
                 remail = st.text_input("Seu e-mail")
                 level = st.selectbox("Seu nível de inglês", ["Iniciante", "Intermediário", "Avançado", "Não sei"])
                 msg = st.text_area("Mensagem (opcional)", placeholder="Conte por que quer usar o app…", height=80)
-                if st.form_submit_button("Enviar solicitação", type="primary", use_container_width=True):
+                if st.form_submit_button("Enviar solicitação", type="primary", width="stretch"):
                     err = auth.request_access(store, remail, name, f"[nível: {level}] {msg}".strip())
                     if err:
                         st.warning(err)
@@ -73,7 +73,7 @@ def _login_screen():
                 newp = st.text_input("Nova senha", type="password",
                                     help=f"Mínimo {auth.MIN_PW} caracteres, com letras e números.")
                 newp2 = st.text_input("Confirme a nova senha", type="password")
-                if st.form_submit_button("Trocar senha", type="primary", use_container_width=True):
+                if st.form_submit_button("Trocar senha", type="primary", width="stretch"):
                     if newp != newp2:
                         st.error("As senhas não conferem.")
                     else:
@@ -92,7 +92,7 @@ def _force_change_screen(user):
             new = st.text_input("Nova senha", type="password",
                                 help=f"Mínimo {auth.MIN_PW} caracteres, com letras e números.")
             new2 = st.text_input("Confirme a nova senha", type="password")
-            if st.form_submit_button("Salvar e entrar", type="primary", use_container_width=True):
+            if st.form_submit_button("Salvar e entrar", type="primary", width="stretch"):
                 if new != new2:
                     st.error("As senhas não conferem.")
                 else:
@@ -130,7 +130,7 @@ with st.sidebar:
     role_badge = "👑 Admin" if auth.is_admin(current) else "👤 Aluno"
     st.markdown(f"**{current.get('name') or user}**  \n<span class='badge blue'>{role_badge}</span>  "
                 f"<span class='badge'>{user}</span>", unsafe_allow_html=True)
-    if st.button("🚪 Sair", use_container_width=True):
+    if st.button("🚪 Sair", width="stretch"):
         st.session_state.pop("auth_email", None)
         st.session_state.pop("auth_user", None)
         st.rerun()
@@ -158,6 +158,7 @@ pages = {
         st.Page("views/dashboard.py", title="Dashboard", icon="🏠", default=True),
         st.Page("views/revisar.py", title="Review (spaced repetition)", icon="🔁"),
         st.Page("views/praticar.py", title="Practice", icon="🎯"),
+        st.Page("views/shadowing.py", title="Shadowing (speaking)", icon="🗣️"),
         st.Page("views/simulado.py", title="Timed level test", icon="📝"),
         st.Page("views/erros.py", title="Mistakes notebook", icon="📒"),
     ],

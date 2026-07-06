@@ -53,7 +53,7 @@ if cards:
         df = df[df["topic"].isin(ft)]
     if fp:
         df = df[df["type"].isin(fp)]
-    st.dataframe(df, hide_index=True, use_container_width=True, height=320)
+    st.dataframe(df, hide_index=True, width="stretch", height=320)
 
 st.divider()
 
@@ -72,10 +72,10 @@ with c1:
     st.download_button("⬇️ Export progress (JSON)",
                        json.dumps(payload, ensure_ascii=False, indent=1, default=str),
                        file_name=f"english_backup_{user}_{dt.date.today()}.json",
-                       use_container_width=True)
+                       width="stretch")
 with c2:
     up = st.file_uploader("⬆️ Restore backup", type="json", label_visibility="collapsed")
-    if up and st.button("Restore progress from file", use_container_width=True):
+    if up and st.button("Restore progress from file", width="stretch"):
         try:
             data = json.load(up)
             for cid, state in (data.get("progress") or {}).items():

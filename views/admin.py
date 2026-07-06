@@ -28,7 +28,7 @@ with tab_req:
             if r.get("message"):
                 st.caption(r["message"])
             c1, c2 = st.columns(2)
-            if c1.button("✅ Aprovar e criar login", key=f"ap_{r['id']}", use_container_width=True):
+            if c1.button("✅ Aprovar e criar login", key=f"ap_{r['id']}", width="stretch"):
                 temp = auth.temp_password()
                 err = auth.create_user(store, r["email"], r.get("name", ""), temp,
                                        role="user", must_change=True)
@@ -39,7 +39,7 @@ with tab_req:
                     store.log_audit(me["email"], "approve_request", r["email"])
                     st.success(f"Conta criada para `{r['email']}`.")
                     st.info(f"🔑 Senha temporária: **{temp}**  \nEnvie para a pessoa — ela troca no 1º acesso.")
-            if c2.button("🗑️ Rejeitar", key=f"rj_{r['id']}", use_container_width=True):
+            if c2.button("🗑️ Rejeitar", key=f"rj_{r['id']}", width="stretch"):
                 store.update_access_request(r["id"], "rejected")
                 store.log_audit(me["email"], "reject_request", r["email"])
                 st.rerun()
@@ -79,20 +79,20 @@ with tab_users:
                 f"{'👑 admin' if u.get('role') == 'admin' else '👤 user'} · "
                 f"{'🟢 ativo' if u.get('active') else '🔴 inativo'}"
                 + (f" · {u.get('level')}" if u.get('level') else ""))
-            if c2.button("🔑 Reset senha", key=f"rs_{u['email']}", use_container_width=True):
+            if c2.button("🔑 Reset senha", key=f"rs_{u['email']}", width="stretch"):
                 temp = auth.temp_password()
                 auth.set_password(store, u["email"], temp, must_change=True)
                 store.log_audit(me["email"], "reset_pw", u["email"])
                 st.info(f"Nova senha de `{u['email']}`: **{temp}**")
             active = u.get("active", True)
             if c3.button("🚫 Desativar" if active else "✅ Ativar", key=f"tg_{u['email']}",
-                         use_container_width=True):
+                         width="stretch"):
                 full = store.get_app_user(u["email"])
                 store.upsert_app_user({**full, "active": not active})
                 store.log_audit(me["email"], "toggle_active", u["email"])
                 st.rerun()
             if u["email"] != me["email"]:
-                if c4.button("🗑️ Excluir", key=f"del_{u['email']}", use_container_width=True):
+                if c4.button("🗑️ Excluir", key=f"del_{u['email']}", width="stretch"):
                     st.session_state[f"cfd_{u['email']}"] = True
             if st.session_state.get(f"cfd_{u['email']}"):
                 st.warning(f"Excluir `{u['email']}` e **todo o progresso** dessa pessoa? Não dá pra desfazer.")
@@ -123,7 +123,7 @@ with tab_prog:
                      "Mastered": mature, "Answers": len(ans), "Accuracy": acc})
     if rows:
         st.dataframe(
-            pd.DataFrame(rows), hide_index=True, use_container_width=True,
+            pd.DataFrame(rows), hide_index=True, width="stretch",
             column_config={"Accuracy": st.column_config.ProgressColumn(
                 format="percent", min_value=0, max_value=1)})
     else:
@@ -135,4 +135,4 @@ with tab_log:
     if not log:
         st.caption("Sem eventos registrados ainda.")
     else:
-        st.dataframe(pd.DataFrame(log), hide_index=True, use_container_width=True)
+        st.dataframe(pd.DataFrame(log), hide_index=True, width="stretch")

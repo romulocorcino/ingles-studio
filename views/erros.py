@@ -39,11 +39,11 @@ c3.metric("🍀 Lucky guesses", len(lucky),
           help="Answered correctly but flagged as a guess — you don't truly know these yet.")
 
 b1, b2 = st.columns(2)
-if b1.button(f"▶️ Drill all {len(notebook)}", type="primary", use_container_width=True):
+if b1.button(f"▶️ Drill all {len(notebook)}", type="primary", width="stretch"):
     ss.erros_qz = ui.new_quiz_state([e["card"] for e in notebook])
     st.rerun()
 if b2.button(f"🔥 Drill only the {len(hard)} hard ones", disabled=not hard,
-             use_container_width=True):
+             width="stretch"):
     ss.erros_qz = ui.new_quiz_state([e["card"] for e in hard])
     st.rerun()
 
@@ -65,7 +65,7 @@ with tab_stats:
         fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
                           font_color="#c9d1d9", coloraxis_showscale=False,
                           height=max(240, 42 * len(wdf)), margin=dict(l=10, r=10, t=10, b=10))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
         worst = weak[0]["topic"]
         worst_cards = [c for c in cards if c["tipo"] == "questao" and c["topico"] == worst]
         if st.button(f"🎯 Drill your worst topic: {worst} ({weak[0]['misses']} misses)",

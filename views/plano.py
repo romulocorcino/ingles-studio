@@ -78,7 +78,7 @@ for t in TOPIC_WEIGHTS:
 pdf = pd.DataFrame(rows).sort_values("Priority", ascending=False)
 pdf["Weight"] = (100 * pdf["Weight"]).round(1)
 st.dataframe(
-    pdf, hide_index=True, use_container_width=True,
+    pdf, hide_index=True, width="stretch",
     column_config={
         "Weight": st.column_config.NumberColumn(format="%.1f%%"),
         "Readiness": st.column_config.ProgressColumn(format="percent", min_value=0, max_value=1),

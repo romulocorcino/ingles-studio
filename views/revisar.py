@@ -128,7 +128,7 @@ if card["tipo"] == "questao":
     if not rv["show"]:
         conf = st.radio("How confident are you?", ui.CONF_OPTS, horizontal=True,
                         key=f"rv_cf_{rv['i']}")
-        if st.button("Show answer", type="primary", disabled=choice is None, use_container_width=True):
+        if st.button("Show answer", type="primary", disabled=choice is None, width="stretch"):
             ok = card["opcoes"].index(choice) == card["correta"]
             store.log_answer(user, card["id"], card["topico"], ok, "review",
                              int((time.time() - rv["card_start"]) * 1000),
@@ -141,6 +141,7 @@ if card["tipo"] == "questao":
             "✅ Correct!" if rv.get("was_ok") else "❌ Missed.")
         ui.answer_box(f"✅ **Answer:** {correct}"
                       + (f"\n\n💡 {card['explicacao']}" if card.get("explicacao") else ""))
+        ui.ai_explain(card, key_suffix=str(rv["i"]))
 else:
     ui.card_box(meta, f"**{card['frente']}**")
     ui.speak_button(card["frente"], label="🔊 Listen (native)")
@@ -149,7 +150,7 @@ else:
             "🧑‍🏫 Feynman: explain it in your own words before revealing (optional)",
             key=f"rv_fy_{rv['i']}", height=90,
             placeholder="Writing your own explanation strengthens memory far more than re-reading...")
-        if st.button("👁️ Show answer", type="primary", use_container_width=True):
+        if st.button("👁️ Show answer", type="primary", width="stretch"):
             rv["show"] = True
             rv["feynman"] = feynman.strip()
             st.rerun()
@@ -157,10 +158,11 @@ else:
         if rv.get("feynman"):
             ui.answer_box(rv["feynman"], prefix="🧑‍🏫 Your explanation")
         ui.answer_box(card["verso"], prefix="✅ Model answer")
+        ui.ai_explain(card, key_suffix=str(rv["i"]))
         if card.get("imagem"):
             img_path = os.path.join(APP_DIR, card["imagem"])
             if os.path.exists(img_path):
-                st.image(img_path, use_container_width=True)
+                st.image(img_path, width="stretch")
 
 # ---------------- rating buttons (with predicted interval) ----------------
 if rv["show"]:

@@ -79,7 +79,7 @@ if not m["submitted"]:
     with top2:
         timer()
     with top3:
-        if st.button("🏁 Finish", type="primary", use_container_width=True):
+        if st.button("🏁 Finish", type="primary", width="stretch"):
             m["confirm_end"] = True
 
     if m["confirm_end"]:
@@ -87,10 +87,10 @@ if not m["submitted"]:
         msg = f"**{blank} questions still blank**. " if blank else ""
         st.warning(f"{msg}Submit your test?")
         cc1, cc2 = st.columns(2)
-        if cc1.button("✅ Submit now", use_container_width=True):
+        if cc1.button("✅ Submit now", width="stretch"):
             _submit()
             st.rerun()
-        if cc2.button("← Back to the test", use_container_width=True):
+        if cc2.button("← Back to the test", width="stretch"):
             m["confirm_end"] = False
             st.rerun()
         st.stop()
@@ -120,14 +120,14 @@ if not m["submitted"]:
     m["ans"][i] = c["opcoes"].index(choice) if choice is not None else m["ans"].get(i)
 
     b1, b2, b3 = st.columns(3)
-    if b1.button("← Previous", disabled=i == 0, use_container_width=True):
+    if b1.button("← Previous", disabled=i == 0, width="stretch"):
         m["i"] -= 1
         st.rerun()
     flag_lbl = "🚩 Unflag" if i in m["flags"] else "🚩 Flag for review"
-    if b2.button(flag_lbl, use_container_width=True):
+    if b2.button(flag_lbl, width="stretch"):
         m["flags"] ^= {i}
         st.rerun()
-    if b3.button("Next →", disabled=i == n - 1, use_container_width=True):
+    if b3.button("Next →", disabled=i == n - 1, width="stretch"):
         m["i"] += 1
         st.rerun()
     st.stop()
@@ -172,7 +172,7 @@ c4.metric("vs. target", verdict, help=help_)
 st.subheader("By topic")
 df = pd.DataFrame([{"Topic": t, "Correct": f"{o}/{tt}", "Accuracy": o / tt}
                    for t, (o, tt) in sorted(by_t.items(), key=lambda x: x[1][0] / x[1][1])])
-st.dataframe(df, hide_index=True, use_container_width=True,
+st.dataframe(df, hide_index=True, width="stretch",
              column_config={"Accuracy": st.column_config.ProgressColumn(
                  format="percent", min_value=0, max_value=1)})
 

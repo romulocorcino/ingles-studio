@@ -54,7 +54,7 @@ with tab1:
     fig.update_layout(**PLOT_LAYOUT, yaxis=dict(title="% accuracy", range=[0, 100]),
                       yaxis2=dict(overlaying="y", side="right", title="questions", showgrid=False),
                       legend=dict(orientation="h", y=1.12))
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 # ---------------- by topic ----------------
 with tab2:
@@ -68,7 +68,7 @@ with tab2:
     fig.update_traces(texttemplate="%{text} ans.", textposition="outside")
     fig.update_layout(**{**PLOT_LAYOUT, "height": max(300, 40 * len(tdf))},
                       xaxis_tickformat=".0%", coloraxis_showscale=False)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
     weak = tdf[(tdf["n"] >= 5) & (tdf["Accuracy"] < 0.6)]["Topic"].tolist()
     if weak:
         st.error("🎯 Study priority: " + ", ".join(weak))
@@ -82,7 +82,7 @@ with tab5:
                 "calibration analytics.")
     else:
         st.dataframe(
-            cal.drop(columns=["Overconfident"]), hide_index=True, use_container_width=True,
+            cal.drop(columns=["Overconfident"]), hide_index=True, width="stretch",
             column_config={
                 "% sure": st.column_config.ProgressColumn(format="percent", min_value=0, max_value=1),
                 "Acc. when sure": st.column_config.ProgressColumn(format="percent", min_value=0, max_value=1),
@@ -107,7 +107,7 @@ with tab5:
         fig = px.bar(cdf, x="Misses", y="Cause", orientation="h", text="Misses")
         fig.update_traces(marker_color="#f85149", textposition="outside")
         fig.update_layout(**{**PLOT_LAYOUT, "height": 220})
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
         fix = {"content": "more cards + concept review on those readings",
                "misread": "slow down: underline what the question asks before the options",
                "calc": "calculator drills; write intermediate steps",
@@ -132,12 +132,12 @@ with tab3:
                         line=dict(color="#5B8DEF", width=3), name="Tests")
         fig.update_layout(**PLOT_LAYOUT, yaxis=dict(title="% accuracy", range=[0, 100]),
                           showlegend=False)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
         st.dataframe(pd.DataFrame([{
             "Date": str(r["ts"])[:16].replace("T", " "), "Questions": r["n"],
             "Correct": r["correct"], "Score": f"{float(r['pct']):.0f}%",
             "Duration": f"{(r.get('duration_s') or 0) // 60}min"} for r in mocks]),
-            hide_index=True, use_container_width=True)
+            hide_index=True, width="stretch")
 
 # ---------------- future load ----------------
 with tab4:
@@ -146,6 +146,6 @@ with tab4:
     fig = px.bar(fc, x="date", y="due", labels={"date": "", "due": "cards due"})
     fig.update_traces(marker_color="#5B8DEF")
     fig.update_layout(**PLOT_LAYOUT)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
     st.caption("FSRS review cards coming due per day (overdue counts as today). "
                "Keep the daily queue at zero for the algorithm to work well.")
