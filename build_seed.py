@@ -361,6 +361,294 @@ for topico, sub, enun, opts, cor, exp, diff in QUESTIONS:
     add_question(topico, sub, enun, opts, cor, exp, diff)
 
 
+# =====================================================================
+# EXPANSÃO DE CONTEÚDO (pacote 2)
+# =====================================================================
+EVERYDAY_EXTRA = {
+    "Phone & Internet": [
+        ("Can you hear me now?", "Você consegue me ouvir agora?", "", "", "", 1),
+        ("You're breaking up.", "Está cortando / falhando (ligação).", "", "", "", 2),
+        ("Let me call you back.", "Deixa eu te ligar de volta.", "", "", "", 1),
+        ("The Wi-Fi is down.", "O Wi-Fi está fora do ar.", "", "", "", 1),
+        ("Could you send me the link?", "Você pode me mandar o link?", "", "", "", 1),
+        ("I'll text you the address.", "Eu te mando o endereço por mensagem.", "", "", "", 2),
+        ("My battery is about to die.", "Minha bateria está acabando.", "", "", "", 2),
+        ("Can we reschedule the call?", "Podemos remarcar a ligação?", "", "", "", 2),
+    ],
+    "Making plans": [
+        ("Are you free this weekend?", "Você está livre neste fim de semana?", "", "", "", 1),
+        ("Let's grab a coffee sometime.", "Vamos tomar um café qualquer dia.", "", "", "", 2),
+        ("What time works for you?", "Que horário funciona pra você?", "", "", "", 1),
+        ("I'm looking forward to it.", "Estou ansioso por isso.", "", "", "", 2),
+        ("Something came up.", "Surgiu um imprevisto.", "", "", "Ótima para cancelar educadamente.", 2),
+        ("Can we take a rain check?", "Podemos deixar para outra hora?", "", "", "Idiomático: adiar um convite.", 3),
+        ("Count me in!", "Pode contar comigo!", "", "", "", 2),
+        ("I'll let you know.", "Eu te aviso.", "", "", "", 1),
+    ],
+    "Hotel & Stay": [
+        ("I have a reservation.", "Eu tenho uma reserva.", "", "", "", 1),
+        ("What time is check-out?", "Que horas é o check-out?", "", "", "", 1),
+        ("Is breakfast included?", "O café da manhã está incluído?", "", "", "", 1),
+        ("Could I get a wake-up call?", "Poderia me acordar com uma ligação?", "", "", "", 2),
+        ("The room is a bit noisy.", "O quarto está um pouco barulhento.", "", "", "", 2),
+        ("Can I leave my bags here?", "Posso deixar minhas malas aqui?", "", "", "", 1),
+    ],
+    "Politeness & Apologies": [
+        ("I'm so sorry, my fault.", "Me desculpa, foi culpa minha.", "", "", "", 1),
+        ("No worries at all.", "Sem problema nenhum.", "", "", "", 1),
+        ("Excuse me, may I get through?", "Com licença, posso passar?", "", "", "", 1),
+        ("I didn't mean to.", "Eu não quis / não foi por querer.", "", "", "", 2),
+        ("Would you mind helping me?", "Você se importaria de me ajudar?", "", "", "Muito educado.", 2),
+        ("Thanks a million!", "Muito obrigado mesmo!", "", "", "", 1),
+        ("After you.", "Você primeiro. (gentileza)", "", "", "", 2),
+    ],
+    "Opinions & Reactions": [
+        ("That's a good point.", "Esse é um bom argumento.", "", "", "", 2),
+        ("I see what you mean.", "Entendo o que você quer dizer.", "", "", "", 2),
+        ("I'm not so sure about that.", "Não tenho tanta certeza disso.", "", "", "", 2),
+        ("It's worth a shot.", "Vale a tentativa.", "", "", "", 2),
+        ("That's fair enough.", "É justo / faz sentido.", "", "", "", 2),
+        ("No way!", "De jeito nenhum! / Não acredito!", "", "", "", 1),
+    ],
+}
+
+VOCAB_EXTRA = [
+    ("to improve", "melhorar", "ɪmˈpruːv", "", "", 1),
+    ("to increase", "aumentar", "ɪnˈkriːs", "", "verbo; substantivo: INcrease.", 2),
+    ("to decrease", "diminuir", "dɪˈkriːs", "", "", 2),
+    ("to allow", "permitir", "əˈlaʊ", "", "", 2),
+    ("to require", "exigir / requerer", "rɪˈkwaɪər", "", "", 2),
+    ("to provide", "fornecer / oferecer", "prəˈvaɪd", "", "", 2),
+    ("to suggest", "sugerir", "səˈdʒest", "", "", 2),
+    ("to complain", "reclamar", "kəmˈpleɪn", "", "", 2),
+    ("to deserve", "merecer", "dɪˈzɜːrv", "", "", 2),
+    ("to succeed", "ter sucesso / conseguir", "səkˈsiːd", "", "", 2),
+    ("harsh", "duro / severo", "hɑːrʃ", "", "", 3),
+    ("smooth", "suave / tranquilo", "smuːð", "", "", 2),
+    ("tough", "difícil / durão", "tʌf", "", "", 2),
+    ("fair", "justo", "feər", "", "", 1),
+    ("wealthy", "rico / próspero", "ˈwelθi", "", "", 2),
+    ("accurate", "preciso / exato", "ˈækjərət", "", "", 3),
+    ("meaningful", "significativo", "", "", "", 3),
+    ("aware", "ciente / consciente", "əˈweər", "Are you aware of the risks?", "", 2),
+    ("in charge of", "responsável por", "", "She's in charge of sales.", "", 2),
+    ("on purpose", "de propósito", "", "", "≠ by accident.", 2),
+    ("at least", "pelo menos", "", "", "", 1),
+    ("as soon as possible", "o mais rápido possível", "", "", "sigla: ASAP.", 2),
+    ("regarding", "a respeito de / sobre", "", "Regarding your email...", "", 3),
+    ("throughout", "ao longo de / por todo", "θruːˈaʊt", "", "", 3),
+]
+
+PHRASAL_EXTRA = [
+    ("set up", "montar / configurar", "", "Let's set up a meeting.", "", 2),
+    ("break down", "quebrar (parar de funcionar)", "", "My car broke down.", "", 2),
+    ("check in", "fazer check-in", "", "", "", 1),
+    ("check out", "sair (hotel) / dar uma olhada", "", "Check out this article!", "", 2),
+    ("call off", "cancelar", "", "They called off the trip.", "", 2),
+    ("catch up", "colocar o papo em dia / alcançar", "", "Let's catch up soon.", "", 2),
+    ("hang out", "sair / passar o tempo", "", "We hung out yesterday.", "", 2),
+    ("hang on", "esperar (segura aí)", "", "Hang on a second.", "", 1),
+    ("point out", "apontar / destacar", "", "She pointed out a mistake.", "", 3),
+    ("sort out", "resolver / organizar", "", "I'll sort it out.", "", 2),
+    ("take off", "decolar / tirar (roupa)", "", "The plane took off.", "", 2),
+    ("come across", "topar com / dar a impressão", "", "I came across an old photo.", "", 3),
+]
+
+IDIOMS_EXTRA = [
+    ("Under the weather.", "Meio adoentado / indisposto.", "", "", "", 3),
+    ("On the same page.", "Alinhados / de acordo.", "", "", "", 2),
+    ("The ball is in your court.", "A decisão / vez é sua.", "", "", "", 3),
+    ("Cut to the chase.", "Ir direto ao ponto.", "", "", "", 3),
+    ("Get the hang of it.", "Pegar o jeito.", "", "", "", 2),
+    ("A blessing in disguise.", "Um mal que veio para o bem.", "", "", "", 3),
+    ("Back to square one.", "De volta à estaca zero.", "", "", "", 3),
+    ("Beat around the bush.", "Enrolar / não ir direto ao ponto.", "", "", "", 3),
+    ("Call it a day.", "Encerrar por hoje.", "", "", "", 2),
+    ("Piece of cake.", "Moleza.", "", "", "", 2),
+]
+
+BUSINESS_EXTRA = [
+    ("Let's align on this.", "Vamos nos alinhar sobre isso.", "", "", "", 2),
+    ("Can you keep me in the loop?", "Pode me manter informado?", "", "", "", 3),
+    ("Let's take this offline.", "Vamos tratar disso depois/à parte.", "", "", "Jargão de reunião.", 3),
+    ("What's the deadline?", "Qual é o prazo?", "", "", "", 1),
+    ("I'll follow up with you.", "Eu faço o acompanhamento com você.", "", "", "", 2),
+    ("Let's touch base tomorrow.", "Vamos conversar/alinhar amanhã.", "", "", "", 3),
+    ("Can we push it to next week?", "Podemos empurrar para a semana que vem?", "", "", "", 2),
+    ("I'm swamped right now.", "Estou atolado de trabalho agora.", "", "", "", 3),
+    ("Let's move forward with it.", "Vamos seguir em frente com isso.", "", "", "", 2),
+    ("That works for me.", "Por mim funciona.", "", "", "", 1),
+    ("Let me loop in the team.", "Deixa eu incluir a equipe.", "", "", "", 3),
+    ("Just a heads-up:", "Só um aviso / adiantando:", "", "", "", 3),
+]
+
+PRONUN_EXTRA = [
+    ("thought / taught", "pensamento / ensinou", "θɔːt / tɔːt", "", "/θ/ vs /t/.", 3),
+    ("cat / cut", "gato / cortar", "kæt / kʌt", "", "/æ/ vs /ʌ/.", 2),
+    ("bad / bed", "ruim / cama", "bæd / bed", "", "/æ/ vs /e/.", 2),
+    ("full / fool", "cheio / bobo", "fʊl / fuːl", "", "/ʊ/ curto vs /uː/ longo.", 2),
+    ("vowel / bowel", "vogal / intestino", "ˈvaʊəl / ˈbaʊəl", "", "cuidado com /v/ vs /b/.", 3),
+    ("island", "ilha", "ˈaɪlənd", "", "o 's' é mudo: AI-land.", 2),
+    ("receipt", "recibo", "rɪˈsiːt", "", "o 'p' é mudo.", 3),
+    ("although", "embora", "ɔːlˈðoʊ", "", "termina com som /oʊ/.", 2),
+    ("focus", "foco / focar", "ˈfoʊkəs", "", "FO-cus, não 'fâquis'.", 1),
+    ("develop", "desenvolver", "dɪˈveləp", "", "tônica no VE: de-VE-lop.", 2),
+    ("determine", "determinar", "dɪˈtɜːrmɪn", "", "termina com /ɪn/, não 'main'.", 3),
+    ("vegetable", "vegetal / legume", "ˈvedʒtəbl", "", "3 sílabas: VEJ-ta-bl.", 2),
+]
+
+CONNECTORS_EXTRA = [
+    ("Therefore, ...", "Portanto, ...", "", "", "", 2),
+    ("Otherwise, ...", "Caso contrário, ...", "", "", "", 2),
+    ("Meanwhile, ...", "Enquanto isso, ...", "", "", "", 2),
+    ("As a matter of fact, ...", "Na verdade / aliás, ...", "", "", "", 3),
+    ("First of all, ...", "Antes de tudo, ...", "", "", "", 1),
+    ("On top of that, ...", "Além do mais, ...", "", "", "", 2),
+    ("In conclusion, ...", "Concluindo, ...", "", "", "", 2),
+    ("Even though ...", "Mesmo que / apesar de ...", "", "Even though it's hard, I'll try.", "", 2),
+]
+
+GRAMMAR_EXTRA = [
+    ("used to + verbo",
+     "Hábito ou estado no passado que não acontece mais.\n\n"
+     "> *I **used to** smoke. She **used to** live here.*\n\n"
+     "Negativa/pergunta: *didn't use to / did you use to*.", 2),
+    ("There is vs There are",
+     "**There is** + singular/incontável: *There is a book / some milk*.\n\n"
+     "**There are** + plural: *There are two cars*.", 1),
+    ("Present perfect: for vs since",
+     "**for** + período (*for 3 years, for a while*).\n\n"
+     "**since** + ponto no tempo (*since 2020, since Monday*).", 2),
+    ("Countable vs uncountable",
+     "Contáveis têm plural (*books, apples*). Incontáveis não (*water, information, advice, money*).\n\n"
+     "Com incontáveis use *some, much, a little*.", 2),
+    ("Word order (adjetivo + substantivo)",
+     "Em inglês o adjetivo vem **antes** do substantivo: *a **red car*** (não 'a car red').\n\n"
+     "Ordem: opinião → tamanho → idade → cor → origem.", 2),
+    ("Question tags",
+     "Frase afirmativa → tag negativa: *You're coming, **aren't you**?*\n\n"
+     "Frase negativa → tag afirmativa: *He isn't here, **is he**?*", 3),
+    ("Modais: can / could / should / must",
+     "**can** = habilidade/permissão; **could** = passado/educado; "
+     "**should** = conselho; **must** = obrigação forte.\n\n"
+     "> *You **should** rest. You **must** wear a seatbelt.*", 2),
+    ("Comparações: as ... as",
+     "Igualdade: *as tall **as** you*. Negativa: *not as expensive as*.", 2),
+]
+
+QUESTIONS_EXTRA = [
+    ("Grammar", "Prepositions", "I'm interested ___ learning Japanese.",
+     ["on", "in", "at"], 1, "'interested in + -ing'.", 2),
+    ("Grammar", "Prepositions", "She's married ___ a doctor.",
+     ["with", "to", "at"], 1, "'married to' (não 'married with').", 2),
+    ("Grammar", "Prepositions", "We arrived ___ the airport late.",
+     ["at", "to", "in"], 0, "'arrive at' um lugar específico; 'arrive in' cidade/país.", 3),
+    ("Grammar", "Prepositions", "I'll see you ___ Monday.",
+     ["in", "at", "on"], 2, "'on' para dias da semana.", 1),
+    ("Grammar", "Prepositions", "The meeting is ___ 3 p.m.",
+     ["at", "on", "in"], 0, "'at' para horas.", 1),
+    ("Grammar", "Articles", "She is ___ honest person.",
+     ["a", "an", "the"], 1, "'an' antes de som de vogal ('h' mudo em honest).", 3),
+    ("Grammar", "Tenses", "Look! It ___ .",
+     ["rains", "is raining", "rained"], 1, "Ação agora → present continuous.", 2),
+    ("Grammar", "Tenses", "By the time we arrived, the movie ___ .",
+     ["started", "has started", "had started"], 2, "Ação anterior a outra no passado → past perfect.", 3),
+    ("Grammar", "Tenses", "I ___ him since last year.",
+     ["didn't see", "haven't seen", "don't see"], 1, "'since' → present perfect.", 2),
+    ("Grammar", "Conditionals", "If you heat ice, it ___ .",
+     ["melts", "will melt", "would melt"], 0, "Fato/verdade geral → zero conditional (present).", 2),
+    ("Grammar", "Modals", "You ___ smoke here. It's forbidden.",
+     ["mustn't", "don't have to", "shouldn't"], 0, "'mustn't' = proibido.", 3),
+    ("Grammar", "Modals", "It's optional — you ___ come if you don't want to.",
+     ["mustn't", "don't have to", "can't"], 1, "'don't have to' = não é obrigatório.", 3),
+    ("Grammar", "Quantifiers", "How ___ money do you have?",
+     ["many", "much", "some"], 1, "'money' é incontável → 'much'.", 2),
+    ("Grammar", "Quantifiers", "There are too ___ people here.",
+     ["much", "many", "few"], 1, "'people' é contável no plural → 'many'.", 2),
+    ("Grammar", "Comparatives", "This test is ___ than the last one.",
+     ["difficult", "more difficult", "most difficult"], 1, "Adjetivo longo → 'more + adj'.", 2),
+    ("Grammar", "Comparatives", "She runs ___ than me.",
+     ["fast", "faster", "fastest"], 1, "Comparativo curto → -er.", 1),
+    ("Grammar", "Superlatives", "It's the ___ day of my life!",
+     ["good", "better", "best"], 2, "Superlativo irregular de 'good' → 'best'.", 2),
+    ("Grammar", "Gerund/Infinitive", "I need ___ a new phone.",
+     ["buy", "to buy", "buying"], 1, "'need' + to + verbo.", 2),
+    ("Grammar", "Gerund/Infinitive", "She's good at ___ problems.",
+     ["solve", "to solve", "solving"], 2, "Após preposição ('at') → gerúndio.", 2),
+    ("Grammar", "Question tags", "You're coming, ___ ?",
+     ["are you", "aren't you", "don't you"], 1, "Afirmativa → tag negativa.", 3),
+    ("Grammar", "used to", "I ___ play soccer when I was a kid.",
+     ["use to", "used to", "am used to"], 1, "'used to' para hábito passado.", 2),
+    ("Vocabulary", "Word choice", "Can you ___ me a favor?",
+     ["do", "make", "take"], 0, "'do a favor'.", 2),
+    ("Vocabulary", "Word choice", "I need to ___ a decision.",
+     ["do", "make", "take"], 1, "'make a decision'.", 2),
+    ("Vocabulary", "Word choice", "He ___ a lot of money as an engineer.",
+     ["wins", "earns", "gains"], 1, "'earn money' = ganhar dinheiro (trabalho).", 3),
+    ("Vocabulary", "Word choice", "Please ___ the light off.",
+     ["turn", "close", "shut"], 0, "'turn off the light'.", 1),
+    ("Vocabulary", "False friends", "'Pretend' significa:",
+     ["pretender", "fingir", "prender"], 1, "'pretend' = fingir; 'pretender' = intend.", 2),
+    ("Vocabulary", "False friends", "'Actually' NÃO significa:",
+     ["na verdade", "de fato", "atualmente"], 2, "'actually' = na verdade; 'atualmente' = currently.", 2),
+    ("Vocabulary", "Word choice", "This information ___ very useful.",
+     ["are", "is", "were"], 1, "'information' é incontável → verbo singular.", 3),
+    ("Vocabulary", "Synonyms", "A synonym for 'huge' is:",
+     ["tiny", "enormous", "narrow"], 1, "'huge' = enorme = enormous.", 2),
+    ("Phrasal Verbs", "Meaning", "'The car broke down' means it ___ .",
+     ["was stolen", "stopped working", "got faster"], 1, "'break down' = quebrar/parar de funcionar.", 2),
+    ("Phrasal Verbs", "Meaning", "Let's ___ the meeting; nobody can come. (cancelar)",
+     ["call off", "call on", "call up"], 0, "'call off' = cancelar.", 2),
+    ("Phrasal Verbs", "Meaning", "I need to ___ on my emails. (colocar em dia)",
+     ["catch up", "catch on", "catch out"], 0, "'catch up' = pôr em dia.", 2),
+    ("Phrasal Verbs", "Meaning", "Please ___ your shoes before entering. (tirar)",
+     ["take off", "take up", "take in"], 0, "'take off' = tirar (roupa/calçado).", 2),
+    ("Idioms & Expressions", "Meaning", "'It cost an arm and a leg' means it was very ___ .",
+     ["cheap", "expensive", "easy"], 1, "'cost an arm and a leg' = caríssimo.", 2),
+    ("Idioms & Expressions", "Meaning", "'I'm feeling under the weather' means I feel ___ .",
+     ["great", "sick", "angry"], 1, "'under the weather' = indisposto.", 3),
+    ("Idioms & Expressions", "Meaning", "'Let's cut to the chase' means let's ___ .",
+     ["get to the point", "take a break", "go home"], 0, "'cut to the chase' = ir direto ao ponto.", 3),
+    ("Pronunciation", "Silent letters", "Which letter is silent in 'island'?",
+     ["l", "s", "d"], 1, "O 's' é mudo: /ˈaɪlənd/.", 3),
+    ("Pronunciation", "Sounds", "Which word has the /θ/ sound (as in 'think')?",
+     ["this", "three", "the"], 1, "'three' tem /θ/; 'this'/'the' têm /ð/.", 3),
+    ("Pronunciation", "Stress", "Where is the stress in 'deVElop'?",
+     ["1st syllable", "2nd syllable", "3rd syllable"], 1, "de-VE-lop: tônica na 2ª.", 2),
+    ("Everyday Phrases", "Usage", "Someone says 'Thank you!'. A natural reply is:",
+     ["You're welcome!", "Please.", "Yes, I do."], 0, "Resposta natural a agradecimento.", 1),
+    ("Everyday Phrases", "Usage", "To politely decline food, you can say:",
+     ["No!", "I'm good, thanks.", "I don't want."], 1, "Educado e natural.", 2),
+    ("Connectors & Writing", "Usage", "___ the rain, we went out.",
+     ["Despite", "Although", "Because"], 0, "'Despite' + substantivo ('the rain').", 3),
+    ("Connectors & Writing", "Usage", "___ it was raining, we went out.",
+     ["Despite", "Although", "In spite"], 1, "'Although' + oração (sujeito+verbo).", 3),
+    ("Grammar", "Tenses", "While I ___ , the phone rang.",
+     ["cooked", "was cooking", "cook"], 1, "Ação em progresso interrompida → past continuous.", 2),
+    ("Business English", "Meaning", "'Let's take this offline' means let's discuss it ___ .",
+     ["later/separately", "on the internet", "louder"], 0, "Jargão: tratar fora da reunião.", 3),
+]
+
+for sub, items in EVERYDAY_EXTRA.items():
+    for en, pt, ipa, ex, tip, diff in items:
+        add_flashcard("Everyday Phrases", sub, en, pt, ipa, ex, tip, diff)
+for en, pt, ipa, ex, tip, diff in VOCAB_EXTRA:
+    add_flashcard("Vocabulary", "Essential words", en, pt, ipa, ex, tip, diff)
+for en, pt, ipa, ex, tip, diff in PHRASAL_EXTRA:
+    add_flashcard("Phrasal Verbs", "Common", en, pt, ipa, ex, tip, diff)
+for en, pt, ipa, ex, tip, diff in IDIOMS_EXTRA:
+    add_flashcard("Idioms & Expressions", "Common idioms", en, pt, ipa, ex, tip, diff)
+for en, pt, ipa, ex, tip, diff in BUSINESS_EXTRA:
+    add_flashcard("Business English", "Meetings", en, pt, ipa, ex, tip, diff)
+for en, pt, ipa, ex, tip, diff in PRONUN_EXTRA:
+    add_flashcard("Pronunciation", "Tricky sounds", en, pt, ipa, ex, tip, diff)
+for en, pt, ipa, ex, tip, diff in CONNECTORS_EXTRA:
+    add_flashcard("Connectors & Writing", "Linking words", en, pt, ipa, ex, tip, diff)
+for frente, verso, diff in GRAMMAR_EXTRA:
+    add_concept("Grammar", "Rules", frente, verso, diff)
+for topico, sub, enun, opts, cor, exp, diff in QUESTIONS_EXTRA:
+    add_question(topico, sub, enun, opts, cor, exp, diff)
+
 out = {"cards": cards}
 path = os.path.join(os.path.dirname(__file__), "seed_cards.json")
 with open(path, "w", encoding="utf-8") as f:
