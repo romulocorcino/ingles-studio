@@ -1,0 +1,2099 @@
+{
+ "cards": [
+  {
+   "id": "eve-gre-f001",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Greetings",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Hi, nice to meet you!",
+   "verso": "**Oi, prazer em conhecer você!**\n\n/haɪ naɪs tu miːt juː/\n\n_“Hi, nice to meet you! I'm Ana.”_"
+  },
+  {
+   "id": "eve-gre-f002",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Greetings",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "How are you doing?",
+   "verso": "**Como você está? / Como vai?**\n\n/haʊ ɑːr juː ˈduːɪŋ/"
+  },
+  {
+   "id": "eve-gre-f003",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Greetings",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I'm doing great, thanks!",
+   "verso": "**Estou muito bem, obrigado!**"
+  },
+  {
+   "id": "eve-gre-f004",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Greetings",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "What's your name?",
+   "verso": "**Qual é o seu nome?**\n\n/wɒts jɔːr neɪm/"
+  },
+  {
+   "id": "eve-gre-f005",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Greetings",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Where are you from?",
+   "verso": "**De onde você é?**"
+  },
+  {
+   "id": "eve-gre-f006",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Greetings",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Long time no see!",
+   "verso": "**Quanto tempo!**\n\n💡 Informal, muito comum."
+  },
+  {
+   "id": "eve-gre-f007",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Greetings",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Take care!",
+   "verso": "**Se cuida!**\n\n/teɪk keər/"
+  },
+  {
+   "id": "eve-gre-f008",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Greetings",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "How have you been?",
+   "verso": "**Como você tem passado?**\n\n💡 Para quem você não vê há um tempo."
+  },
+  {
+   "id": "eve-sma-f009",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Small talk",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "What do you do for a living?",
+   "verso": "**O que você faz da vida? (trabalho)**"
+  },
+  {
+   "id": "eve-sma-f010",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Small talk",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "What are you up to?",
+   "verso": "**O que você está aprontando/fazendo?**\n\n💡 Informal, super comum."
+  },
+  {
+   "id": "eve-sma-f011",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Small talk",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "That makes sense.",
+   "verso": "**Isso faz sentido.**"
+  },
+  {
+   "id": "eve-sma-f012",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Small talk",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I couldn't agree more.",
+   "verso": "**Concordo plenamente.**"
+  },
+  {
+   "id": "eve-sma-f013",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Small talk",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "To be honest with you...",
+   "verso": "**Para ser sincero com você...**"
+  },
+  {
+   "id": "eve-sma-f014",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Small talk",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "By the way, ...",
+   "verso": "**A propósito, ... / Aliás, ...**\n\n/baɪ ðə weɪ/"
+  },
+  {
+   "id": "eve-sma-f015",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Small talk",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Never mind.",
+   "verso": "**Deixa pra lá.**\n\n/ˈnevər maɪnd/"
+  },
+  {
+   "id": "eve-sma-f016",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Small talk",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "What do you mean?",
+   "verso": "**O que você quer dizer?**"
+  },
+  {
+   "id": "eve-sma-f017",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Small talk",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Could you say that again?",
+   "verso": "**Você poderia repetir?**"
+  },
+  {
+   "id": "eve-sma-f018",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Small talk",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Sounds good to me.",
+   "verso": "**Por mim, tudo bem.**"
+  },
+  {
+   "id": "eve-sma-f019",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Small talk",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "It's up to you.",
+   "verso": "**A decisão é sua. / Você que sabe.**"
+  },
+  {
+   "id": "eve-sma-f020",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Small talk",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I'm just kidding.",
+   "verso": "**Estou só brincando.**"
+  },
+  {
+   "id": "eve-res-f021",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Restaurant",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "A table for two, please.",
+   "verso": "**Uma mesa para dois, por favor.**"
+  },
+  {
+   "id": "eve-res-f022",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Restaurant",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Could I see the menu?",
+   "verso": "**Posso ver o cardápio?**"
+  },
+  {
+   "id": "eve-res-f023",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Restaurant",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "What do you recommend?",
+   "verso": "**O que você recomenda?**"
+  },
+  {
+   "id": "eve-res-f024",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Restaurant",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Can I get the check, please?",
+   "verso": "**Pode trazer a conta, por favor?**\n\n💡 'check' (EUA) / 'bill' (UK)."
+  },
+  {
+   "id": "eve-res-f025",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Restaurant",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I'm allergic to peanuts.",
+   "verso": "**Eu sou alérgico a amendoim.**"
+  },
+  {
+   "id": "eve-res-f026",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Restaurant",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "This is delicious!",
+   "verso": "**Isso está delicioso!**\n\n/ðɪs ɪz dɪˈlɪʃəs/"
+  },
+  {
+   "id": "eve-res-f027",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Restaurant",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I'd like it to go, please.",
+   "verso": "**Eu queria para viagem, por favor.**"
+  },
+  {
+   "id": "eve-res-f028",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Restaurant",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Keep the change.",
+   "verso": "**Pode ficar com o troco.**"
+  },
+  {
+   "id": "eve-tra-f029",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Travel",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Where is the boarding gate?",
+   "verso": "**Onde fica o portão de embarque?**"
+  },
+  {
+   "id": "eve-tra-f030",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Travel",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I have a connecting flight.",
+   "verso": "**Eu tenho um voo de conexão.**"
+  },
+  {
+   "id": "eve-tra-f031",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Travel",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Is this seat taken?",
+   "verso": "**Este assento está ocupado?**"
+  },
+  {
+   "id": "eve-tra-f032",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Travel",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "How do I get to downtown?",
+   "verso": "**Como eu chego ao centro?**"
+  },
+  {
+   "id": "eve-tra-f033",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Travel",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "My luggage is missing.",
+   "verso": "**Minha bagagem sumiu.**"
+  },
+  {
+   "id": "eve-tra-f034",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Travel",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I'm just passing through.",
+   "verso": "**Estou só de passagem.**"
+  },
+  {
+   "id": "eve-sho-f035",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Shopping",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "How much does it cost?",
+   "verso": "**Quanto custa?**\n\n/haʊ mʌtʃ dʌz ɪt kɒst/"
+  },
+  {
+   "id": "eve-sho-f036",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Shopping",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Do you have this in a larger size?",
+   "verso": "**Você tem isso num tamanho maior?**"
+  },
+  {
+   "id": "eve-sho-f037",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Shopping",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Can I try it on?",
+   "verso": "**Posso experimentar?**"
+  },
+  {
+   "id": "eve-sho-f038",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Shopping",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I'm just looking, thanks.",
+   "verso": "**Só estou olhando, obrigado.**"
+  },
+  {
+   "id": "eve-sho-f039",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Shopping",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Is it on sale?",
+   "verso": "**Está em promoção?**"
+  },
+  {
+   "id": "eve-sho-f040",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Shopping",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Can I get a refund?",
+   "verso": "**Posso pedir reembolso?**"
+  },
+  {
+   "id": "eve-sho-f041",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Shopping",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I'll take it.",
+   "verso": "**Eu vou levar.**"
+  },
+  {
+   "id": "eve-eme-f042",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Emergencies",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I need help!",
+   "verso": "**Eu preciso de ajuda!**"
+  },
+  {
+   "id": "eve-eme-f043",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Emergencies",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Call an ambulance!",
+   "verso": "**Chame uma ambulância!**"
+  },
+  {
+   "id": "eve-eme-f044",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Emergencies",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I don't feel well.",
+   "verso": "**Não estou me sentindo bem.**"
+  },
+  {
+   "id": "eve-eme-f045",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Emergencies",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Where is the nearest hospital?",
+   "verso": "**Onde fica o hospital mais próximo?**"
+  },
+  {
+   "id": "eve-eme-f046",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Emergencies",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "It hurts here.",
+   "verso": "**Dói aqui.**"
+  },
+  {
+   "id": "eve-eme-f047",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Emergencies",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I lost my passport.",
+   "verso": "**Eu perdi meu passaporte.**"
+  },
+  {
+   "id": "eve-dir-f048",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Directions",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "How do I get there?",
+   "verso": "**Como eu chego lá?**"
+  },
+  {
+   "id": "eve-dir-f049",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Directions",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Is it far from here?",
+   "verso": "**É longe daqui?**"
+  },
+  {
+   "id": "eve-dir-f050",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Directions",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Go straight ahead.",
+   "verso": "**Siga em frente.**\n\n/ɡoʊ streɪt əˈhed/"
+  },
+  {
+   "id": "eve-dir-f051",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Directions",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "It's just around the corner.",
+   "verso": "**Fica logo ali na esquina.**"
+  },
+  {
+   "id": "eve-dir-f052",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Directions",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I think I'm lost.",
+   "verso": "**Acho que estou perdido.**"
+  },
+  {
+   "id": "eve-dir-f053",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Directions",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "It's a five-minute walk.",
+   "verso": "**É uns cinco minutos a pé.**"
+  },
+  {
+   "id": "eve-fee-f054",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Feelings",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I'm thrilled about it.",
+   "verso": "**Estou empolgadíssimo com isso.**"
+  },
+  {
+   "id": "eve-fee-f055",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Feelings",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "That's frustrating.",
+   "verso": "**Isso é frustrante.**"
+  },
+  {
+   "id": "eve-fee-f056",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Feelings",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I feel like having pizza.",
+   "verso": "**Estou a fim de pizza.**\n\n💡 'feel like + -ing' = estar a fim de."
+  },
+  {
+   "id": "eve-fee-f057",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Feelings",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I can't wait!",
+   "verso": "**Mal posso esperar!**"
+  },
+  {
+   "id": "eve-fee-f058",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Feelings",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I'm over the moon.",
+   "verso": "**Estou nas nuvens / radiante.**\n\n💡 Idiomático = muito feliz."
+  },
+  {
+   "id": "eve-fee-f059",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Feelings",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "That's a relief.",
+   "verso": "**Que alívio.**"
+  },
+  {
+   "id": "eve-tim-f060",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Time & weather",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "What time is it?",
+   "verso": "**Que horas são?**"
+  },
+  {
+   "id": "eve-tim-f061",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Time & weather",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "It's half past three.",
+   "verso": "**São três e meia.**"
+  },
+  {
+   "id": "eve-tim-f062",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Time & weather",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "It's freezing outside.",
+   "verso": "**Está congelando lá fora.**"
+  },
+  {
+   "id": "eve-tim-f063",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Time & weather",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I'm running late.",
+   "verso": "**Estou atrasado.**"
+  },
+  {
+   "id": "eve-tim-f064",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Time & weather",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "See you the day after tomorrow.",
+   "verso": "**Até depois de amanhã.**"
+  },
+  {
+   "id": "eve-tim-f065",
+   "tipo": "flashcard",
+   "topico": "Everyday Phrases",
+   "subtopico": "Time & weather",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Let's meet at noon.",
+   "verso": "**Vamos nos encontrar ao meio-dia.**"
+  },
+  {
+   "id": "bus-mee-f066",
+   "tipo": "flashcard",
+   "topico": "Business English",
+   "subtopico": "Meetings",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Let's get started.",
+   "verso": "**Vamos começar.**"
+  },
+  {
+   "id": "bus-mee-f067",
+   "tipo": "flashcard",
+   "topico": "Business English",
+   "subtopico": "Meetings",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Can everyone hear me?",
+   "verso": "**Todos conseguem me ouvir?**"
+  },
+  {
+   "id": "bus-mee-f068",
+   "tipo": "flashcard",
+   "topico": "Business English",
+   "subtopico": "Meetings",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Let's circle back on that.",
+   "verso": "**Vamos retomar isso depois.**\n\n💡 Jargão corporativo."
+  },
+  {
+   "id": "bus-mee-f069",
+   "tipo": "flashcard",
+   "topico": "Business English",
+   "subtopico": "Meetings",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I'll get back to you.",
+   "verso": "**Eu te retorno.**"
+  },
+  {
+   "id": "bus-mee-f070",
+   "tipo": "flashcard",
+   "topico": "Business English",
+   "subtopico": "Meetings",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Let's touch base next week.",
+   "verso": "**Vamos nos alinhar na semana que vem.**"
+  },
+  {
+   "id": "bus-mee-f071",
+   "tipo": "flashcard",
+   "topico": "Business English",
+   "subtopico": "Meetings",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Could you walk me through it?",
+   "verso": "**Você poderia me explicar passo a passo?**"
+  },
+  {
+   "id": "bus-mee-f072",
+   "tipo": "flashcard",
+   "topico": "Business English",
+   "subtopico": "Meetings",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "That's out of scope.",
+   "verso": "**Isso está fora do escopo.**"
+  },
+  {
+   "id": "bus-mee-f073",
+   "tipo": "flashcard",
+   "topico": "Business English",
+   "subtopico": "Meetings",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "I'm on it.",
+   "verso": "**Já estou cuidando disso.**"
+  },
+  {
+   "id": "bus-mee-f074",
+   "tipo": "flashcard",
+   "topico": "Business English",
+   "subtopico": "Meetings",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Let me double-check.",
+   "verso": "**Deixa eu conferir de novo.**"
+  },
+  {
+   "id": "bus-mee-f075",
+   "tipo": "flashcard",
+   "topico": "Business English",
+   "subtopico": "Meetings",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "What are the next steps?",
+   "verso": "**Quais são os próximos passos?**"
+  },
+  {
+   "id": "bus-mee-f076",
+   "tipo": "flashcard",
+   "topico": "Business English",
+   "subtopico": "Meetings",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Let's wrap up.",
+   "verso": "**Vamos encerrar/finalizar.**"
+  },
+  {
+   "id": "bus-mee-f077",
+   "tipo": "flashcard",
+   "topico": "Business English",
+   "subtopico": "Meetings",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Let's keep it brief.",
+   "verso": "**Vamos ser breves.**"
+  },
+  {
+   "id": "voc-ess-f078",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "although",
+   "verso": "**embora / apesar de**\n\n/ɔːlˈðoʊ/\n\n_“Although it was raining, we went out.”_"
+  },
+  {
+   "id": "voc-ess-f079",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "however",
+   "verso": "**no entanto / porém**\n\n/haʊˈevər/"
+  },
+  {
+   "id": "voc-ess-f080",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "actually",
+   "verso": "**na verdade**\n\n/ˈæktʃuəli/\n\n💡 NÃO significa 'atualmente'!"
+  },
+  {
+   "id": "voc-ess-f081",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "currently",
+   "verso": "**atualmente**\n\n/ˈkɜːrəntli/"
+  },
+  {
+   "id": "voc-ess-f082",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "meanwhile",
+   "verso": "**enquanto isso**"
+  },
+  {
+   "id": "voc-ess-f083",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "therefore",
+   "verso": "**portanto**\n\n/ˈðerfɔːr/"
+  },
+  {
+   "id": "voc-ess-f084",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "besides",
+   "verso": "**além disso**"
+  },
+  {
+   "id": "voc-ess-f085",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "regardless",
+   "verso": "**independentemente**"
+  },
+  {
+   "id": "voc-ess-f086",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "awkward",
+   "verso": "**constrangedor / estranho**\n\n/ˈɔːkwərd/"
+  },
+  {
+   "id": "voc-ess-f087",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "reliable",
+   "verso": "**confiável**\n\n/rɪˈlaɪəbl/"
+  },
+  {
+   "id": "voc-ess-f088",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "overwhelming",
+   "verso": "**avassalador / muito intenso**"
+  },
+  {
+   "id": "voc-ess-f089",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "straightforward",
+   "verso": "**simples / direto**"
+  },
+  {
+   "id": "voc-ess-f090",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "insight",
+   "verso": "**percepção / entendimento profundo**"
+  },
+  {
+   "id": "voc-ess-f091",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "willing",
+   "verso": "**disposto (a fazer algo)**\n\n_“Are you willing to help?”_"
+  },
+  {
+   "id": "voc-ess-f092",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "to afford",
+   "verso": "**poder pagar / ter condições de**\n\n_“I can't afford a new car.”_"
+  },
+  {
+   "id": "voc-ess-f093",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "to improve",
+   "verso": "**melhorar**\n\n/ɪmˈpruːv/"
+  },
+  {
+   "id": "voc-ess-f094",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "to achieve",
+   "verso": "**alcançar / conquistar**\n\n/əˈtʃiːv/"
+  },
+  {
+   "id": "voc-ess-f095",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "to avoid",
+   "verso": "**evitar**\n\n/əˈvɔɪd/"
+  },
+  {
+   "id": "voc-ess-f096",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "worth",
+   "verso": "**que vale a pena**\n\n/wɜːrθ/\n\n_“It's worth trying.”_"
+  },
+  {
+   "id": "voc-ess-f097",
+   "tipo": "flashcard",
+   "topico": "Vocabulary",
+   "subtopico": "Essential words",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "issue",
+   "verso": "**problema / questão**\n\n/ˈɪʃuː/"
+  },
+  {
+   "id": "phr-com-f098",
+   "tipo": "flashcard",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Common",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "give up",
+   "verso": "**desistir**\n\n_“Don't give up on your dreams.”_"
+  },
+  {
+   "id": "phr-com-f099",
+   "tipo": "flashcard",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Common",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "figure out",
+   "verso": "**descobrir / entender (resolver)**\n\n_“I can't figure out this problem.”_"
+  },
+  {
+   "id": "phr-com-f100",
+   "tipo": "flashcard",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Common",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "look forward to",
+   "verso": "**ansiar por / aguardar com expectativa**\n\n_“I look forward to your reply.”_"
+  },
+  {
+   "id": "phr-com-f101",
+   "tipo": "flashcard",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Common",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "come up with",
+   "verso": "**bolar / inventar (ideia)**\n\n_“She came up with a great idea.”_"
+  },
+  {
+   "id": "phr-com-f102",
+   "tipo": "flashcard",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Common",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "run out of",
+   "verso": "**ficar sem (acabar)**\n\n_“We ran out of milk.”_"
+  },
+  {
+   "id": "phr-com-f103",
+   "tipo": "flashcard",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Common",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "put off",
+   "verso": "**adiar / procrastinar**\n\n_“Don't put off until tomorrow.”_"
+  },
+  {
+   "id": "phr-com-f104",
+   "tipo": "flashcard",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Common",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "get along with",
+   "verso": "**se dar bem com (alguém)**\n\n_“I get along with my coworkers.”_"
+  },
+  {
+   "id": "phr-com-f105",
+   "tipo": "flashcard",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Common",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "bring up",
+   "verso": "**mencionar / trazer à tona**\n\n_“He brought up a good point.”_"
+  },
+  {
+   "id": "phr-com-f106",
+   "tipo": "flashcard",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Common",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "work out",
+   "verso": "**dar certo / malhar**\n\n_“It all worked out in the end.”_"
+  },
+  {
+   "id": "phr-com-f107",
+   "tipo": "flashcard",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Common",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "look up",
+   "verso": "**pesquisar / procurar (info)**\n\n_“Look up the word in a dictionary.”_"
+  },
+  {
+   "id": "phr-com-f108",
+   "tipo": "flashcard",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Common",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "turn down",
+   "verso": "**recusar / abaixar (volume)**\n\n_“She turned down the offer.”_"
+  },
+  {
+   "id": "phr-com-f109",
+   "tipo": "flashcard",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Common",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "show up",
+   "verso": "**aparecer / comparecer**\n\n_“He didn't show up to the meeting.”_"
+  },
+  {
+   "id": "phr-com-f110",
+   "tipo": "flashcard",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Common",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "find out",
+   "verso": "**descobrir (saber)**\n\n_“I found out the truth.”_"
+  },
+  {
+   "id": "phr-com-f111",
+   "tipo": "flashcard",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Common",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "carry on",
+   "verso": "**continuar / seguir em frente**\n\n_“Carry on with your work.”_"
+  },
+  {
+   "id": "phr-com-f112",
+   "tipo": "flashcard",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Common",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "get over",
+   "verso": "**superar (algo/alguém)**\n\n_“It took months to get over it.”_"
+  },
+  {
+   "id": "idi-com-f113",
+   "tipo": "flashcard",
+   "topico": "Idioms & Expressions",
+   "subtopico": "Common idioms",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "It's a piece of cake.",
+   "verso": "**É moleza / muito fácil.**\n\n💡 Tarefa muito fácil."
+  },
+  {
+   "id": "idi-com-f114",
+   "tipo": "flashcard",
+   "topico": "Idioms & Expressions",
+   "subtopico": "Common idioms",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Break a leg!",
+   "verso": "**Boa sorte! (antes de se apresentar)**\n\n💡 Nunca traduza ao pé da letra!"
+  },
+  {
+   "id": "idi-com-f115",
+   "tipo": "flashcard",
+   "topico": "Idioms & Expressions",
+   "subtopico": "Common idioms",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "It's not my cup of tea.",
+   "verso": "**Não é muito a minha praia.**"
+  },
+  {
+   "id": "idi-com-f116",
+   "tipo": "flashcard",
+   "topico": "Idioms & Expressions",
+   "subtopico": "Common idioms",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Hit the nail on the head.",
+   "verso": "**Acertar em cheio.**"
+  },
+  {
+   "id": "idi-com-f117",
+   "tipo": "flashcard",
+   "topico": "Idioms & Expressions",
+   "subtopico": "Common idioms",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Once in a blue moon.",
+   "verso": "**Uma vez na vida (raramente).**"
+  },
+  {
+   "id": "idi-com-f118",
+   "tipo": "flashcard",
+   "topico": "Idioms & Expressions",
+   "subtopico": "Common idioms",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Bite the bullet.",
+   "verso": "**Encarar algo difícil / engolir o sapo.**"
+  },
+  {
+   "id": "idi-com-f119",
+   "tipo": "flashcard",
+   "topico": "Idioms & Expressions",
+   "subtopico": "Common idioms",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Cost an arm and a leg.",
+   "verso": "**Custar os olhos da cara.**"
+  },
+  {
+   "id": "idi-com-f120",
+   "tipo": "flashcard",
+   "topico": "Idioms & Expressions",
+   "subtopico": "Common idioms",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "It rings a bell.",
+   "verso": "**Isso me soa familiar.**"
+  },
+  {
+   "id": "idi-com-f121",
+   "tipo": "flashcard",
+   "topico": "Idioms & Expressions",
+   "subtopico": "Common idioms",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Let's call it a day.",
+   "verso": "**Vamos parar por hoje.**"
+  },
+  {
+   "id": "idi-com-f122",
+   "tipo": "flashcard",
+   "topico": "Idioms & Expressions",
+   "subtopico": "Common idioms",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Speak of the devil!",
+   "verso": "**Falando no diabo!**\n\n💡 Quando a pessoa aparece."
+  },
+  {
+   "id": "pro-tri-f123",
+   "tipo": "flashcard",
+   "topico": "Pronunciation",
+   "subtopico": "Tricky sounds",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "ship / sheep",
+   "verso": "**navio / ovelha**\n\n/ʃɪp / ʃiːp/\n\n💡 Vogal curta /ɪ/ vs longa /iː/."
+  },
+  {
+   "id": "pro-tri-f124",
+   "tipo": "flashcard",
+   "topico": "Pronunciation",
+   "subtopico": "Tricky sounds",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "live / leave",
+   "verso": "**morar / partir**\n\n/lɪv / liːv/\n\n💡 /ɪ/ curto vs /iː/ longo."
+  },
+  {
+   "id": "pro-tri-f125",
+   "tipo": "flashcard",
+   "topico": "Pronunciation",
+   "subtopico": "Tricky sounds",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "beach / bitch",
+   "verso": "**praia / (palavrão)**\n\n/biːtʃ / bɪtʃ/\n\n💡 Cuidado! /iː/ vs /ɪ/."
+  },
+  {
+   "id": "pro-tri-f126",
+   "tipo": "flashcard",
+   "topico": "Pronunciation",
+   "subtopico": "Tricky sounds",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "think / sink",
+   "verso": "**pensar / afundar**\n\n/θɪŋk / sɪŋk/\n\n💡 /θ/ (língua nos dentes) vs /s/."
+  },
+  {
+   "id": "pro-tri-f127",
+   "tipo": "flashcard",
+   "topico": "Pronunciation",
+   "subtopico": "Tricky sounds",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "three / tree",
+   "verso": "**três / árvore**\n\n/θriː / triː/\n\n💡 /θ/ vs /t/."
+  },
+  {
+   "id": "pro-tri-f128",
+   "tipo": "flashcard",
+   "topico": "Pronunciation",
+   "subtopico": "Tricky sounds",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "work / walk",
+   "verso": "**trabalhar / caminhar**\n\n/wɜːrk / wɔːk/\n\n💡 /ɜːr/ vs /ɔː/."
+  },
+  {
+   "id": "pro-tri-f129",
+   "tipo": "flashcard",
+   "topico": "Pronunciation",
+   "subtopico": "Tricky sounds",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "comfortable",
+   "verso": "**confortável**\n\n/ˈkʌmftəbl/\n\n💡 Só 3 sílabas: KUMF-ta-bl."
+  },
+  {
+   "id": "pro-tri-f130",
+   "tipo": "flashcard",
+   "topico": "Pronunciation",
+   "subtopico": "Tricky sounds",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Wednesday",
+   "verso": "**quarta-feira**\n\n/ˈwenzdeɪ/\n\n💡 O 'd' é mudo: WENZ-day."
+  },
+  {
+   "id": "pro-tri-f131",
+   "tipo": "flashcard",
+   "topico": "Pronunciation",
+   "subtopico": "Tricky sounds",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "clothes",
+   "verso": "**roupas**\n\n/kloʊðz/\n\n💡 Quase 'close' — não pronuncie o 'th' forte."
+  },
+  {
+   "id": "pro-tri-f132",
+   "tipo": "flashcard",
+   "topico": "Pronunciation",
+   "subtopico": "Tricky sounds",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "colonel",
+   "verso": "**coronel**\n\n/ˈkɜːrnl/\n\n💡 Pronuncia-se 'kernel'!"
+  },
+  {
+   "id": "con-lin-f133",
+   "tipo": "flashcard",
+   "topico": "Connectors & Writing",
+   "subtopico": "Linking words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "In addition, ...",
+   "verso": "**Além disso, ...**\n\n💡 Adiciona informação."
+  },
+  {
+   "id": "con-lin-f134",
+   "tipo": "flashcard",
+   "topico": "Connectors & Writing",
+   "subtopico": "Linking words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "On the other hand, ...",
+   "verso": "**Por outro lado, ...**\n\n💡 Contraste."
+  },
+  {
+   "id": "con-lin-f135",
+   "tipo": "flashcard",
+   "topico": "Connectors & Writing",
+   "subtopico": "Linking words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "As a result, ...",
+   "verso": "**Como resultado, ...**\n\n💡 Consequência."
+  },
+  {
+   "id": "con-lin-f136",
+   "tipo": "flashcard",
+   "topico": "Connectors & Writing",
+   "subtopico": "Linking words",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "For instance, ...",
+   "verso": "**Por exemplo, ...**\n\n💡 = for example."
+  },
+  {
+   "id": "con-lin-f137",
+   "tipo": "flashcard",
+   "topico": "Connectors & Writing",
+   "subtopico": "Linking words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "In other words, ...",
+   "verso": "**Em outras palavras, ...**\n\n💡 Reformular."
+  },
+  {
+   "id": "con-lin-f138",
+   "tipo": "flashcard",
+   "topico": "Connectors & Writing",
+   "subtopico": "Linking words",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Nevertheless, ...",
+   "verso": "**Mesmo assim / no entanto, ...**\n\n💡 Contraste formal."
+  },
+  {
+   "id": "con-lin-f139",
+   "tipo": "flashcard",
+   "topico": "Connectors & Writing",
+   "subtopico": "Linking words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "To sum up, ...",
+   "verso": "**Resumindo, ...**\n\n💡 Conclusão."
+  },
+  {
+   "id": "con-lin-f140",
+   "tipo": "flashcard",
+   "topico": "Connectors & Writing",
+   "subtopico": "Linking words",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Due to ...",
+   "verso": "**Devido a ...**\n\n_“Due to the rain, the game was canceled.”_\n\n💡 + substantivo."
+  },
+  {
+   "id": "gra-rul-c001",
+   "tipo": "conceito",
+   "topico": "Grammar",
+   "subtopico": "Rules",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Quando usar Present Perfect vs Past Simple?",
+   "verso": "**Past Simple**: tempo definido no passado (*I saw him yesterday*).\n\n**Present Perfect**: tempo indefinido ou ligado ao presente (*I have seen that movie*). Use com *for/since/ever/already/yet/just*."
+  },
+  {
+   "id": "gra-rul-c002",
+   "tipo": "conceito",
+   "topico": "Grammar",
+   "subtopico": "Rules",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "some vs any",
+   "verso": "**some**: frases afirmativas e ofertas/pedidos (*I have some money. Want some coffee?*).\n\n**any**: negativas e perguntas (*I don't have any money. Do you have any questions?*)."
+  },
+  {
+   "id": "gra-rul-c003",
+   "tipo": "conceito",
+   "topico": "Grammar",
+   "subtopico": "Rules",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "much vs many",
+   "verso": "**much** + incontáveis (*much water, much time*).\n\n**many** + contáveis no plural (*many people, many books*).\n\nEm afirmativas prefira *a lot of*."
+  },
+  {
+   "id": "gra-rul-c004",
+   "tipo": "conceito",
+   "topico": "Grammar",
+   "subtopico": "Rules",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Comparativos e superlativos",
+   "verso": "Curtos: *tall -> taller -> the tallest*.\n\nLongos: *expensive -> more expensive -> the most expensive*.\n\nIrregulares: *good -> better -> best*; *bad -> worse -> worst*."
+  },
+  {
+   "id": "gra-rul-c005",
+   "tipo": "conceito",
+   "topico": "Grammar",
+   "subtopico": "Rules",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Gerund vs Infinitive",
+   "verso": "Após preposições e certos verbos use **-ing**: *enjoy doing, good at swimming*.\n\nApós *want/need/decide/would like* use **to + verbo**: *I want to go*."
+  },
+  {
+   "id": "gra-rul-c006",
+   "tipo": "conceito",
+   "topico": "Grammar",
+   "subtopico": "Rules",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "frente": "Artigo: a / an / the",
+   "verso": "**a/an** = indefinido (algo genérico); **an** antes de som de vogal (*an hour, a university*).\n\n**the** = definido (algo específico já conhecido)."
+  },
+  {
+   "id": "gra-irr-f141",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'go'",
+   "verso": "**went / gone**"
+  },
+  {
+   "id": "gra-irr-f142",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'do'",
+   "verso": "**did / done**"
+  },
+  {
+   "id": "gra-irr-f143",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'see'",
+   "verso": "**saw / seen**"
+  },
+  {
+   "id": "gra-irr-f144",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'take'",
+   "verso": "**took / taken**"
+  },
+  {
+   "id": "gra-irr-f145",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'come'",
+   "verso": "**came / come**"
+  },
+  {
+   "id": "gra-irr-f146",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'give'",
+   "verso": "**gave / given**"
+  },
+  {
+   "id": "gra-irr-f147",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'write'",
+   "verso": "**wrote / written**"
+  },
+  {
+   "id": "gra-irr-f148",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'speak'",
+   "verso": "**spoke / spoken**"
+  },
+  {
+   "id": "gra-irr-f149",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'break'",
+   "verso": "**broke / broken**"
+  },
+  {
+   "id": "gra-irr-f150",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'buy'",
+   "verso": "**bought / bought**"
+  },
+  {
+   "id": "gra-irr-f151",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'think'",
+   "verso": "**thought / thought**"
+  },
+  {
+   "id": "gra-irr-f152",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'bring'",
+   "verso": "**brought / brought**"
+  },
+  {
+   "id": "gra-irr-f153",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'know'",
+   "verso": "**knew / known**"
+  },
+  {
+   "id": "gra-irr-f154",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'get'",
+   "verso": "**got / got(ten)**"
+  },
+  {
+   "id": "gra-irr-f155",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'make'",
+   "verso": "**made / made**"
+  },
+  {
+   "id": "gra-irr-f156",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'eat'",
+   "verso": "**ate / eaten**"
+  },
+  {
+   "id": "gra-irr-f157",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'drive'",
+   "verso": "**drove / driven**"
+  },
+  {
+   "id": "gra-irr-f158",
+   "tipo": "flashcard",
+   "topico": "Grammar",
+   "subtopico": "Irregular verbs",
+   "dificuldade": 2,
+   "tags": [
+    "irregular"
+   ],
+   "fonte": "English Studio",
+   "frente": "Past & participle of 'choose'",
+   "verso": "**chose / chosen**"
+  },
+  {
+   "id": "gra-ten-q001",
+   "tipo": "questao",
+   "topico": "Grammar",
+   "subtopico": "Tenses",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "enunciado": "Choose the correct sentence:",
+   "opcoes": [
+    "I have seen him yesterday.",
+    "I saw him yesterday.",
+    "I seen him yesterday."
+   ],
+   "correta": 1,
+   "explicacao": "Com tempo definido ('yesterday') use o Past Simple: *saw*."
+  },
+  {
+   "id": "gra-pre-q002",
+   "tipo": "questao",
+   "topico": "Grammar",
+   "subtopico": "Present Perfect",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "enunciado": "I ___ in São Paulo for ten years (and still live here).",
+   "opcoes": [
+    "live",
+    "lived",
+    "have lived"
+   ],
+   "correta": 2,
+   "explicacao": "Ação que começou no passado e continua: Present Perfect com 'for'."
+  },
+  {
+   "id": "gra-pre-q003",
+   "tipo": "questao",
+   "topico": "Grammar",
+   "subtopico": "Prepositions",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "enunciado": "She's really good ___ playing the guitar.",
+   "opcoes": [
+    "in",
+    "at",
+    "on"
+   ],
+   "correta": 1,
+   "explicacao": "'good at + -ing' é a colocação correta."
+  },
+  {
+   "id": "gra-art-q004",
+   "tipo": "questao",
+   "topico": "Grammar",
+   "subtopico": "Articles",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "enunciado": "I need to buy ___ umbrella.",
+   "opcoes": [
+    "a",
+    "an",
+    "the"
+   ],
+   "correta": 1,
+   "explicacao": "'an' antes de som de vogal (umbrella começa com /ʌ/)."
+  },
+  {
+   "id": "gra-qua-q005",
+   "tipo": "questao",
+   "topico": "Grammar",
+   "subtopico": "Quantifiers",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "enunciado": "There isn't ___ milk in the fridge.",
+   "opcoes": [
+    "some",
+    "any",
+    "many"
+   ],
+   "correta": 1,
+   "explicacao": "Em frases negativas usa-se 'any'."
+  },
+  {
+   "id": "voc-fal-q006",
+   "tipo": "questao",
+   "topico": "Vocabulary",
+   "subtopico": "False friends",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "enunciado": "'Actually' significa:",
+   "opcoes": [
+    "atualmente",
+    "na verdade",
+    "de fato agora"
+   ],
+   "correta": 1,
+   "explicacao": "'Actually' = na verdade. 'Atualmente' = currently."
+  },
+  {
+   "id": "voc-fal-q007",
+   "tipo": "questao",
+   "topico": "Vocabulary",
+   "subtopico": "False friends",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "enunciado": "How do you say 'puxar' in English?",
+   "opcoes": [
+    "push",
+    "pull",
+    "put"
+   ],
+   "correta": 1,
+   "explicacao": "'pull' = puxar; 'push' = empurrar."
+  },
+  {
+   "id": "voc-wor-q008",
+   "tipo": "questao",
+   "topico": "Vocabulary",
+   "subtopico": "Word choice",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "enunciado": "This restaurant is expensive. I can't ___ it.",
+   "opcoes": [
+    "afford",
+    "spend",
+    "pay"
+   ],
+   "correta": 0,
+   "explicacao": "'afford' = ter condições de pagar."
+  },
+  {
+   "id": "phr-mea-q009",
+   "tipo": "questao",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Meaning",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "enunciado": "'I can't figure out this problem' means I can't ___ it.",
+   "opcoes": [
+    "give up",
+    "understand/solve",
+    "postpone"
+   ],
+   "correta": 1,
+   "explicacao": "'figure out' = descobrir/entender/resolver."
+  },
+  {
+   "id": "phr-mea-q010",
+   "tipo": "questao",
+   "topico": "Phrasal Verbs",
+   "subtopico": "Meaning",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "enunciado": "She decided to ___ the job offer (recusar).",
+   "opcoes": [
+    "turn down",
+    "show up",
+    "look up"
+   ],
+   "correta": 0,
+   "explicacao": "'turn down' = recusar."
+  },
+  {
+   "id": "idi-mea-q011",
+   "tipo": "questao",
+   "topico": "Idioms & Expressions",
+   "subtopico": "Meaning",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "enunciado": "'It's a piece of cake' means it's very ___.",
+   "opcoes": [
+    "difficult",
+    "easy",
+    "expensive"
+   ],
+   "correta": 1,
+   "explicacao": "'a piece of cake' = muito fácil."
+  },
+  {
+   "id": "pro-sou-q012",
+   "tipo": "questao",
+   "topico": "Pronunciation",
+   "subtopico": "Sounds",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "enunciado": "Which word has the /iː/ (long) sound?",
+   "opcoes": [
+    "ship",
+    "sheep",
+    "sit"
+   ],
+   "correta": 1,
+   "explicacao": "'sheep' tem a vogal longa /iː/; 'ship'/'sit' têm /ɪ/."
+  },
+  {
+   "id": "eve-usa-q013",
+   "tipo": "questao",
+   "topico": "Everyday Phrases",
+   "subtopico": "Usage",
+   "dificuldade": 1,
+   "tags": [],
+   "fonte": "English Studio",
+   "enunciado": "A polite way to ask someone to repeat:",
+   "opcoes": [
+    "Say again?",
+    "Could you say that again, please?",
+    "What you said?"
+   ],
+   "correta": 1,
+   "explicacao": "Forma educada e natural."
+  },
+  {
+   "id": "gra-con-q014",
+   "tipo": "questao",
+   "topico": "Grammar",
+   "subtopico": "Conditionals",
+   "dificuldade": 3,
+   "tags": [],
+   "fonte": "English Studio",
+   "enunciado": "If I ___ rich, I would travel the world.",
+   "opcoes": [
+    "am",
+    "was",
+    "were"
+   ],
+   "correta": 2,
+   "explicacao": "2nd conditional (hipotético): 'were' para todas as pessoas."
+  },
+  {
+   "id": "gra-ger-q015",
+   "tipo": "questao",
+   "topico": "Grammar",
+   "subtopico": "Gerund/Infinitive",
+   "dificuldade": 2,
+   "tags": [],
+   "fonte": "English Studio",
+   "enunciado": "I enjoy ___ to music.",
+   "opcoes": [
+    "listen",
+    "to listen",
+    "listening"
+   ],
+   "correta": 2,
+   "explicacao": "'enjoy' é seguido de gerúndio (-ing)."
+  }
+ ]
+}
