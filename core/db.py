@@ -455,6 +455,7 @@ class LocalStore:
 # ============================================================ factory
 @st.cache_resource
 def get_store():
+    _store_schema_version = "2"  # bump quando mudar métodos das stores (invalida este cache_resource)
     url, key = _secret("SUPABASE_URL"), _secret("SUPABASE_KEY")
     if url and key:
         try:
