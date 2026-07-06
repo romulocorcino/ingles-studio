@@ -19,20 +19,21 @@ TARGET_ACCURACY = 0.80        # meta de acurácia por habilidade
 # Peso relativo de cada habilidade (importância no seu progresso de fluência).
 # Usa o ponto médio da faixa; normalizado para somar 1.0.
 TOPIC_WEIGHTS = {
-    "Everyday Phrases":       (18, 22),
-    "Vocabulary":             (14, 18),
-    "Grammar":                (12, 16),
+    "Everyday Phrases":       (16, 20),
+    "Fluency & Speaking":     (14, 18),
+    "Vocabulary":             (12, 16),
+    "Grammar":                (11, 15),
     "Phrasal Verbs":          (8, 12),
-    "Business English":       (8, 12),
-    "Pronunciation":          (8, 12),
+    "Business English":       (7, 11),
+    "Pronunciation":          (7, 11),
     "Idioms & Expressions":   (6, 10),
     "Connectors & Writing":   (5, 9),
 }
 
 TOPIC_ABBREV = {
-    "Everyday Phrases": "PHR", "Vocabulary": "VOC", "Grammar": "GRA",
-    "Phrasal Verbs": "PHV", "Business English": "BIZ", "Pronunciation": "PRO",
-    "Idioms & Expressions": "IDM", "Connectors & Writing": "CON",
+    "Everyday Phrases": "PHR", "Fluency & Speaking": "FLU", "Vocabulary": "VOC",
+    "Grammar": "GRA", "Phrasal Verbs": "PHV", "Business English": "BIZ",
+    "Pronunciation": "PRO", "Idioms & Expressions": "IDM", "Connectors & Writing": "CON",
 }
 
 
@@ -131,5 +132,36 @@ FORMULAS = {
          "*pretend* = fingir (nao 'pretender' -> **intend**)\n\n"
          "*push* = empurrar (nao 'puxar' -> **pull**)\n\n"
          "*library* = biblioteca (nao 'livraria' -> **bookstore**)", "cuidado!"),
+    ],
+    "Advanced grammar (fluency)": [
+        ("used to / be used to / get used to",
+         "**used to + verbo** = hábito no passado (*I used to smoke*).\n\n"
+         "**be used to + -ing/subst.** = estar acostumado (*I'm used to waking up early*).\n\n"
+         "**get used to + -ing** = se acostumar (processo) (*I'm getting used to it*).",
+         "os três confundem muito"),
+        ("Reported speech (discurso indireto)",
+         "O verbo geralmente **recua um tempo**: present → past, will → would, can → could.\n\n"
+         "> *\"I **am** tired\" → She said she **was** tired.*\n\n"
+         "> *\"I **will** call\" → He said he **would** call.*", ""),
+        ("wish / if only",
+         "Arrependimento/desejo. Presente → **past**: *I wish I **had** more time*.\n\n"
+         "Passado → **past perfect**: *I wish I **had studied** more*.\n\n"
+         "Irritação → **would**: *I wish you **would** stop*.", ""),
+        ("Mixed conditionals",
+         "Condição no passado × resultado no presente:\n\n"
+         "> *If I **had studied** medicine, I **would be** a doctor now.*\n\n"
+         "(if + past perfect, would + verbo)", ""),
+        ("Modals of deduction",
+         "Certeza: **must** (*He **must be** tired*).\n\n"
+         "Impossibilidade: **can't** (*She **can't be** serious*).\n\n"
+         "Possibilidade: **might/may/could** (*It **might** rain*).", "para 'chutar' com lógica"),
+        ("Inversion (ênfase formal)",
+         "Com advérbios negativos no início, inverte-se sujeito e auxiliar:\n\n"
+         "> ***Never have I** seen such a thing.*\n\n"
+         "> ***Not only did** he apologize, but he also paid.*", "soa culto/formal"),
+        ("Cleft sentences (ênfase)",
+         "Destaca uma parte da frase:\n\n"
+         "> ***It was** John **that** called. (não outra pessoa)*\n\n"
+         "> ***What** I need **is** a break.*", "muito usado pra enfatizar"),
     ],
 }

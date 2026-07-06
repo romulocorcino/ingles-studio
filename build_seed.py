@@ -649,6 +649,251 @@ for frente, verso, diff in GRAMMAR_EXTRA:
 for topico, sub, enun, opts, cor, exp, diff in QUESTIONS_EXTRA:
     add_question(topico, sub, enun, opts, cor, exp, diff)
 
+# =====================================================================
+# EXPANSÃO DE CONTEÚDO (pacote 3) — NÍVEL AVANÇADO / FLUÊNCIA
+# =====================================================================
+FLUENCY = {
+    "Discourse markers": [
+        ("The thing is, ...", "A questão é que... / Acontece que...", "", "The thing is, I already made plans.", "Ganha tempo e introduz o ponto.", 3),
+        ("I mean, ...", "Quer dizer, ... / Ou seja, ...", "", "I mean, it's not a big deal.", "Reformula/explica o que você disse.", 2),
+        ("You know what I mean?", "Você entende o que eu quero dizer?", "", "", "Checa se o outro acompanhou.", 2),
+        ("Now that you mention it, ...", "Agora que você falou / mencionou, ...", "", "", "", 3),
+        ("Speaking of which, ...", "Por falar nisso, ...", "", "", "Emenda um assunto relacionado.", 3),
+        ("That reminds me, ...", "Isso me lembra que...", "", "", "", 2),
+        ("Come to think of it, ...", "Pensando bem, ...", "", "", "", 3),
+        ("As I was saying, ...", "Como eu estava dizendo, ...", "", "", "Retoma depois de uma interrupção.", 2),
+        ("Anyway, ...", "Enfim, ... / De qualquer forma, ...", "", "", "Fecha um assunto e segue.", 2),
+        ("Let me put it this way.", "Deixa eu colocar assim / de outro jeito.", "", "", "", 3),
+        ("How can I put this?", "Como é que eu digo isso?", "", "", "Ganha tempo pra achar as palavras.", 3),
+        ("Where was I?", "Onde eu estava? (voltando à história)", "", "", "", 2),
+    ],
+    "Reacting naturally": [
+        ("No way!", "Não acredito! / De jeito nenhum!", "", "", "", 1),
+        ("You're kidding!", "Você está brincando! / Tá de sacanagem!", "", "", "", 2),
+        ("Tell me about it!", "Nem me fale!", "", "", "Concorda com uma queixa.", 3),
+        ("You can say that again!", "Isso mesmo! / Pode falar de novo!", "", "", "Concordância enfática.", 3),
+        ("I know, right?", "Né?! / Pois é!", "", "", "Super comum e natural.", 2),
+        ("Oh, come on!", "Ah, qual é! / Fala sério!", "", "", "", 2),
+        ("No wonder!", "Com razão! / Não é à toa!", "", "No wonder you're tired!", "", 3),
+        ("Good for you!", "Que bom pra você! / Mandou bem!", "", "", "", 2),
+        ("That's a shame.", "Que pena.", "", "", "", 2),
+        ("Fair enough.", "Justo. / Faz sentido.", "", "", "Aceita o argumento do outro.", 3),
+        ("It happens.", "Acontece.", "", "", "", 1),
+        ("What a relief!", "Que alívio!", "", "", "", 2),
+    ],
+    "Softening & diplomacy": [
+        ("I was wondering if you could ...", "Eu queria saber se você poderia... (pedido educado)", "", "I was wondering if you could help me.", "Jeito muito educado de pedir.", 3),
+        ("Would it be possible to ...?", "Seria possível...?", "", "", "", 3),
+        ("I'm afraid I can't.", "Infelizmente não vou poder.", "", "", "'I'm afraid' suaviza uma recusa.", 2),
+        ("To be fair, ...", "Para ser justo, ...", "", "", "", 3),
+        ("Correct me if I'm wrong, but ...", "Me corrija se eu estiver errado, mas...", "", "", "", 3),
+        ("With all due respect, ...", "Com todo o respeito, ...", "", "", "Antes de discordar educadamente.", 3),
+        ("I'd rather not, if that's okay.", "Prefiro não, se não tem problema.", "", "", "", 3),
+        ("It's not really my thing.", "Não é bem a minha praia.", "", "", "", 3),
+        ("I guess so.", "Acho que sim. (sem muita certeza)", "", "", "", 2),
+        ("Not that I know of.", "Que eu saiba, não.", "", "", "", 3),
+        ("kind of / sort of", "meio que / tipo (suaviza)", "", "It's kind of expensive.", "Deixa a fala menos categórica.", 2),
+    ],
+    "Agreeing & disagreeing": [
+        ("That's exactly my point.", "É exatamente o que eu digo.", "", "", "", 3),
+        ("I see your point, but ...", "Entendo seu ponto, mas...", "", "", "Discorda com respeito.", 3),
+        ("I'm not so sure about that.", "Não tenho tanta certeza disso.", "", "", "Discordância suave.", 2),
+        ("I beg to differ.", "Permita-me discordar. (formal)", "", "", "", 3),
+        ("You have a point.", "Você tem razão / tem um ponto.", "", "", "", 2),
+        ("I couldn't agree more.", "Concordo plenamente.", "", "", "", 3),
+        ("Absolutely!", "Com certeza! / Absolutamente!", "", "", "", 1),
+        ("Not necessarily.", "Não necessariamente.", "", "", "", 2),
+        ("It depends.", "Depende.", "", "", "", 1),
+        ("Well, it's complicated.", "Bem, é complicado.", "", "", "", 2),
+    ],
+    "Storytelling": [
+        ("Long story short, ...", "Resumindo a história, ...", "", "", "", 3),
+        ("So basically, ...", "Então, basicamente, ...", "", "", "", 2),
+        ("The next thing I knew, ...", "Quando eu vi, ... / Do nada, ...", "", "", "", 3),
+        ("Out of nowhere, ...", "Do nada, ...", "", "", "", 3),
+        ("To make matters worse, ...", "Para piorar, ...", "", "", "", 3),
+        ("At the end of the day, ...", "No fim das contas, ...", "", "", "Idiomático, muito usado.", 3),
+        ("Believe it or not, ...", "Acredite ou não, ...", "", "", "", 2),
+        ("As it turns out, ...", "Acontece que... / No fim das contas...", "", "", "", 3),
+        ("One thing led to another.", "Uma coisa levou a outra.", "", "", "", 3),
+    ],
+    "Opinions & argument": [
+        ("From my perspective, ...", "Do meu ponto de vista, ...", "", "", "", 3),
+        ("If you ask me, ...", "Se quer minha opinião, ...", "", "", "", 3),
+        ("The way I see it, ...", "Do jeito que eu vejo, ...", "", "", "", 3),
+        ("There's no denying that ...", "Não dá pra negar que...", "", "", "", 3),
+        ("It goes without saying that ...", "Nem preciso dizer que...", "", "", "", 3),
+        ("That being said, ...", "Dito isso, ...", "", "", "Introduz uma ressalva.", 3),
+        ("On the one hand ... on the other hand ...", "Por um lado... por outro lado...", "", "", "", 3),
+        ("Let's agree to disagree.", "Vamos concordar em discordar.", "", "", "", 3),
+    ],
+    "Connected speech (casual)": [
+        ("gonna (going to)", "vou / vai (fala casual)", "ˈɡɔːnə", "I'm gonna call you.", "Só na fala/informal, não em texto formal.", 2),
+        ("wanna (want to)", "quero / quer (fala casual)", "ˈwɒnə", "Do you wanna go?", "Informal.", 2),
+        ("gotta (have got to)", "tenho que (fala casual)", "ˈɡɒtə", "I gotta go.", "Informal.", 2),
+        ("gimme (give me)", "me dá (fala casual)", "ˈɡɪmi", "Gimme a second.", "Informal.", 2),
+        ("lemme (let me)", "deixa eu (fala casual)", "ˈlemi", "Lemme see.", "Informal.", 2),
+        ("kinda (kind of)", "meio que (fala casual)", "ˈkaɪndə", "I'm kinda tired.", "", 2),
+        ("dunno (don't know)", "sei lá / não sei (casual)", "dəˈnoʊ", "I dunno.", "", 2),
+        ("What's up? / 'Sup?", "E aí? / Beleza?", "", "", "Cumprimento informal.", 1),
+        ("How's it going?", "Como vão as coisas?", "", "", "", 1),
+        ("'cause (because)", "porque (fala casual)", "kəz", "", "", 2),
+    ],
+}
+
+IDIOMS_ADV = [
+    ("Get cold feet", "Amarelar / ficar com medo na hora", "", "He got cold feet before the wedding.", "", 3),
+    ("Call the shots", "Dar as cartas / mandar", "", "", "", 3),
+    ("Cut corners", "Fazer nas coxas / economizar de forma ruim", "", "", "", 3),
+    ("Get the ball rolling", "Dar o pontapé inicial", "", "", "", 3),
+    ("Wrap your head around it", "Conseguir assimilar / entender", "", "I can't wrap my head around it.", "", 3),
+    ("On the fence", "Em cima do muro / indeciso", "", "I'm on the fence about it.", "", 3),
+    ("Bite off more than you can chew", "Abraçar o mundo / assumir demais", "", "", "", 3),
+    ("Play it by ear", "Ver como as coisas vão / improvisar", "", "Let's play it by ear.", "", 3),
+    ("It's a no-brainer.", "É óbvio / decisão fácil.", "", "", "", 3),
+    ("The bottom line is ...", "O ponto principal é ...", "", "", "", 3),
+    ("Hit the sack", "Ir dormir / cair na cama", "", "", "", 2),
+    ("Pull someone's leg", "Zoar / brincar com alguém", "", "I'm just pulling your leg.", "", 3),
+    ("Fly under the radar", "Passar despercebido", "", "", "", 3),
+    ("Rings a bell", "Soa familiar", "", "The name rings a bell.", "", 3),
+    ("Give it a shot", "Dar uma chance / tentar", "", "Just give it a shot!", "", 2),
+]
+
+PHRASAL_ADV = [
+    ("put up with", "tolerar / aguentar", "", "I can't put up with the noise.", "", 3),
+    ("get away with", "se safar de (algo errado)", "", "He got away with it.", "", 3),
+    ("come down to", "resumir-se a / depender de", "", "It comes down to money.", "", 3),
+    ("look into", "investigar / apurar", "", "I'll look into it.", "", 2),
+    ("back (someone) up", "apoiar / dar respaldo", "", "I'll back you up.", "", 2),
+    ("make up for", "compensar", "", "Let me make up for it.", "", 3),
+    ("run into", "encontrar por acaso / esbarrar em", "", "I ran into an old friend.", "", 2),
+    ("get by", "se virar / dar um jeito", "", "I can get by with basic English.", "", 3),
+    ("pull off", "conseguir (algo difícil)", "", "She pulled it off!", "", 3),
+    ("stand out", "se destacar", "", "Your CV needs to stand out.", "", 2),
+    ("wear off", "passar (efeito)", "", "The painkiller wore off.", "", 3),
+    ("mess up", "estragar / errar feio", "", "Sorry, I messed up.", "", 2),
+    ("wind up (doing)", "acabar (fazendo)", "", "We wound up staying home.", "", 3),
+    ("cut back on", "reduzir / cortar", "", "I need to cut back on coffee.", "", 3),
+]
+
+VOCAB_ADV = [
+    ("thorough", "minucioso / completo", "ˈθɜːroʊ", "a thorough review", "", 3),
+    ("blunt", "direto / sem rodeios", "blʌnt", "to be blunt...", "", 3),
+    ("subtle", "sutil", "ˈsʌtl", "", "o 'b' é mudo!", 3),
+    ("reluctant", "relutante / sem vontade", "rɪˈlʌktənt", "", "", 3),
+    ("eager", "ávido / muito a fim (positivo)", "ˈiːɡər", "eager to learn", "", 3),
+    ("overwhelmed", "sobrecarregado / assoberbado", "ˌoʊvərˈwelmd", "", "", 3),
+    ("resilient", "resiliente", "rɪˈzɪliənt", "", "", 3),
+    ("compelling", "convincente / cativante", "kəmˈpelɪŋ", "a compelling argument", "", 3),
+    ("feasible", "viável / factível", "ˈfiːzəbl", "", "", 3),
+    ("cumbersome", "trabalhoso / pesado", "ˈkʌmbərsəm", "", "", 3),
+    ("arguably", "possivelmente / pode-se dizer que", "ˈɑːrɡjuəbli", "arguably the best", "", 3),
+    ("eventually", "no fim / com o tempo", "ɪˈventʃuəli", "", "NÃO é 'eventualmente' (=occasionally).", 3),
+    ("thrive", "prosperar / se dar muito bem", "θraɪv", "", "", 3),
+    ("hassle", "transtorno / incômodo", "ˈhæsl", "It's a hassle.", "", 3),
+    ("handy", "útil / à mão / jeitoso", "ˈhændi", "That comes in handy.", "", 2),
+    ("cope with", "lidar / dar conta de", "koʊp", "How do you cope with stress?", "", 3),
+    ("straightforward", "simples e direto", "", "", "", 2),
+    ("insightful", "perspicaz / esclarecedor", "", "", "", 3),
+    ("worthwhile", "que vale a pena", "", "It was worthwhile.", "", 3),
+    ("keen on", "muito a fim de / entusiasmado com", "", "I'm keen on learning.", "", 3),
+]
+
+BUSINESS_ADV = [
+    ("Let's touch base early next week.", "Vamos nos alinhar no começo da semana.", "", "", "", 3),
+    ("I'll circle back with the details.", "Eu retorno com os detalhes.", "", "", "", 3),
+    ("Can we take this offline?", "Podemos tratar disso à parte / depois?", "", "", "", 3),
+    ("Let's park this for now.", "Vamos deixar isso de lado por ora.", "", "", "", 3),
+    ("What's the ballpark figure?", "Qual o valor aproximado?", "", "", "", 3),
+    ("Let's not reinvent the wheel.", "Não vamos reinventar a roda.", "", "", "", 3),
+    ("I'll take ownership of this.", "Eu assumo a responsabilidade disso.", "", "", "", 3),
+    ("Let's manage expectations.", "Vamos alinhar as expectativas.", "", "", "", 3),
+    ("That's a game changer.", "Isso muda o jogo.", "", "", "", 2),
+    ("Let's move the needle on this.", "Vamos fazer diferença nisso de fato.", "", "", "", 3),
+    ("Can you ballpark it?", "Você consegue estimar por alto?", "", "", "", 3),
+    ("Let's regroup after lunch.", "Vamos nos reunir de novo depois do almoço.", "", "", "", 3),
+]
+
+GRAMMAR_ADV = [
+    ("used to vs be used to vs get used to",
+     "**used to + verbo** = hábito passado que acabou (*I used to run*).\n\n"
+     "**be used to + -ing** = estar acostumado (*I'm used to running*).\n\n"
+     "**get used to + -ing** = se acostumando (*I'm getting used to running*).", 3),
+    ("Reported speech (discurso indireto)",
+     "O verbo recua um tempo: present→past, will→would, can→could.\n\n"
+     "> *\"I **am** busy\" → She said she **was** busy.*", 3),
+    ("wish / if only",
+     "Desejo/arrependimento no presente → **past**: *I wish I **knew**.*\n\n"
+     "No passado → **past perfect**: *I wish I **had known**.*", 3),
+    ("Mixed conditional",
+     "Passado hipotético → presente: *If I **had saved** money, I **would be** rich now.*", 3),
+    ("Modals of deduction",
+     "**must** (certeza), **can't** (impossível), **might/could** (talvez): "
+     "*He **must be** home; the lights are on.*", 3),
+    ("would (hábito no passado)",
+     "**would + verbo** para hábitos passados (como 'used to'): "
+     "*When I was a kid, we **would** spend summers at the beach.*", 3),
+]
+
+QUESTIONS_ADV = [
+    ("Fluency & Speaking", "Softening", "Qual soa MAIS educado para um pedido?",
+     ["Give me your report.", "I was wondering if you could send me the report.", "Send the report now."], 1,
+     "'I was wondering if you could...' é a forma mais educada e natural de pedir.", 3),
+    ("Fluency & Speaking", "Reacting", "Seu amigo diz: 'The traffic was a nightmare!' Resposta natural de empatia:",
+     ["Tell me about it!", "Good for you!", "No wonder!"], 0,
+     "'Tell me about it!' concorda com a queixa ('nem me fale!').", 3),
+    ("Grammar", "used to / be used to", "I ___ getting up early now — it doesn't bother me anymore.",
+     ["used to", "am used to", "would"], 1,
+     "Verbo: **be used to + -ing** = estar acostumado (estado atual). 'used to' seria hábito que acabou.", 3),
+    ("Grammar", "Reported speech", "\"I will help you.\" → She said she ___ help me.",
+     ["will", "would", "helps"], 1,
+     "No discurso indireto, **will → would**.", 3),
+    ("Grammar", "wish", "I wish I ___ more time to study.",
+     ["have", "had", "will have"], 1,
+     "Verbo: após **wish** (desejo no presente) usa-se o **past** (had), não o presente.", 3),
+    ("Grammar", "wish (past)", "I wish I ___ harder for the exam last year.",
+     ["studied", "had studied", "study"], 1,
+     "Verbo: arrependimento sobre o **passado** → **past perfect** (had studied).", 3),
+    ("Grammar", "Mixed conditional", "If she ___ the job, she'd be living in London now.",
+     ["took", "had taken", "takes"], 1,
+     "Verbo: condição no passado + resultado no presente → **if + past perfect** (had taken).", 3),
+    ("Grammar", "Modals of deduction", "The lights are off. They ___ be home.",
+     ["must", "can't", "should"], 1,
+     "Verbo modal: evidência de que é impossível → **can't** (dedução negativa).", 3),
+    ("Grammar", "Inversion", "Never ___ such a beautiful place.",
+     ["I have seen", "have I seen", "I saw"], 1,
+     "Com 'Never' no início, inverte-se: **have I seen** (auxiliar antes do sujeito).", 3),
+    ("Idioms & Expressions", "Meaning", "'It's a no-brainer' means the decision is ___.",
+     ["very hard", "obvious/easy", "risky"], 1, "'no-brainer' = decisão óbvia, fácil.", 3),
+    ("Idioms & Expressions", "Meaning", "'He got cold feet' means he ___.",
+     ["got sick", "got nervous and hesitated", "got angry"], 1, "'get cold feet' = amarelar/hesitar por medo.", 3),
+    ("Phrasal Verbs", "Meaning", "'I can't put up with it' means I can't ___ it.",
+     ["understand", "tolerate", "afford"], 1, "'put up with' = tolerar/aguentar.", 3),
+    ("Phrasal Verbs", "Meaning", "'She pulled it off' means she ___.",
+     ["failed", "succeeded at something hard", "gave up"], 1, "'pull off' = conseguir algo difícil.", 3),
+    ("Vocabulary", "False friends", "'Eventually' significa:",
+     ["eventualmente/às vezes", "no fim / com o tempo", "possivelmente"], 1,
+     "'eventually' = no fim/com o tempo (não 'eventualmente' = occasionally).", 3),
+    ("Vocabulary", "Nuance", "A '**blunt**' person is someone who is ___.",
+     ["very polite", "direct/frank", "shy"], 1, "'blunt' = direto, sem rodeios (às vezes rude).", 3),
+]
+
+for sub, items in FLUENCY.items():
+    for en, pt, ipa, ex, tip, diff in items:
+        add_flashcard("Fluency & Speaking", sub, en, pt, ipa, ex, tip, diff)
+for en, pt, ipa, ex, tip, diff in IDIOMS_ADV:
+    add_flashcard("Idioms & Expressions", "Advanced", en, pt, ipa, ex, tip, diff)
+for en, pt, ipa, ex, tip, diff in PHRASAL_ADV:
+    add_flashcard("Phrasal Verbs", "Advanced", en, pt, ipa, ex, tip, diff)
+for en, pt, ipa, ex, tip, diff in VOCAB_ADV:
+    add_flashcard("Vocabulary", "Advanced", en, pt, ipa, ex, tip, diff)
+for en, pt, ipa, ex, tip, diff in BUSINESS_ADV:
+    add_flashcard("Business English", "Advanced", en, pt, ipa, ex, tip, diff)
+for frente, verso, diff in GRAMMAR_ADV:
+    add_concept("Grammar", "Advanced", frente, verso, diff)
+for topico, sub, enun, opts, cor, exp, diff in QUESTIONS_ADV:
+    add_question(topico, sub, enun, opts, cor, exp, diff)
+
 out = {"cards": cards}
 path = os.path.join(os.path.dirname(__file__), "seed_cards.json")
 with open(path, "w", encoding="utf-8") as f:
