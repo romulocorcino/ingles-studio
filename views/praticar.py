@@ -32,7 +32,11 @@ if "pratica" not in ss:
         pool = [c for c in pool if c.get("dificuldade", 3) == 3]
     elif dif == "4-5 (hard)":
         pool = [c for c in pool if c.get("dificuldade", 3) >= 4]
-    n = c4.slider("Number of questions", 5, max(5, len(pool)), min(10, len(pool)))
+    if len(pool) <= 5:
+        n = len(pool)
+        c4.metric("Questions", n)
+    else:
+        n = c4.slider("Number of questions", 5, len(pool), min(10, len(pool)))
 
     st.caption(f"{len(pool)} questions available with this filter.")
     if st.button("▶️ Start", type="primary", disabled=not pool):

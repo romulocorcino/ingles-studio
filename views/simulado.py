@@ -32,8 +32,12 @@ if "mock" not in ss:
     c1, c2 = st.columns(2)
     sel = c1.selectbox("Topic", ["All"] + topics)
     pool = [c for c in questions if sel in ("All", c["topico"])]
-    n_opts = [x for x in (10, 20, 30, 45, 60, 90) if x <= len(pool)] or [len(pool)]
-    n = c2.select_slider("Number of questions", options=n_opts, value=n_opts[-1])
+    n_opts = sorted({x for x in (5, 10, 20, 30, 45, 60, 90) if x <= len(pool)} | {len(pool)})
+    if len(n_opts) < 2:
+        n = n_opts[0] if n_opts else len(pool)
+        c2.metric("Questions", n)
+    else:
+        n = c2.select_slider("Number of questions", options=n_opts, value=n_opts[-1])
     limit_min = n * SECONDS_PER_QUESTION / 60
     st.caption(f"{len(pool)} questions available · time limit: **{limit_min:.0f} min**")
     if st.button("▶️ Start test", type="primary", disabled=not pool):
