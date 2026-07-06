@@ -7,10 +7,11 @@ import streamlit as st
 
 from core import scheduler, ui
 from core.db import APP_DIR, cached_cards, get_store
+from core.db import user_cards
 
 store = get_store()
 user = st.session_state["user"]
-cards = cached_cards()
+cards = user_cards(user)
 settings = st.session_state.get("settings", {})
 retention = float(settings.get("retention") or 0.9)
 daily_new = int(settings.get("daily_new") or 10)

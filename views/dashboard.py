@@ -8,10 +8,11 @@ import streamlit as st
 from core import analytics, scheduler, ui
 from core.content import EXAM_DEFAULT_DATE, TOPIC_ABBREV, TOPIC_WEIGHTS
 from core.db import cached_cards, get_store
+from core.db import user_cards
 
 store = get_store()
 user = st.session_state["user"]
-cards = cached_cards()
+cards = user_cards(user)
 progress = store.get_progress(user)
 answers = store.get_answers(user)
 settings = st.session_state.get("settings", {})

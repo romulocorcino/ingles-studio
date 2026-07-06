@@ -171,6 +171,7 @@ pages = {
         st.Page("views/dados.py", title="Data & sync", icon="⚙️"),
     ],
     "Account": [
+        st.Page("views/add_card.py", title="Add a card", icon="➕"),
         st.Page("views/conta.py", title="My account", icon="👤"),
     ],
 }

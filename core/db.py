@@ -47,6 +47,9 @@ class SupabaseStore:
         for i in range(0, len(cards), 100):
             self.client.table("cards").upsert(cards[i:i + 100]).execute()
 
+    def delete_card(self, card_id):
+        self.client.table("cards").delete().eq("id", card_id).execute()
+
     # ---- progress
     def get_progress(self, user):
         rows = self.client.table("progress").select("*").eq("user_id", user).execute().data or []
@@ -181,7 +184,7 @@ _LOCAL_SCHEMA = """
 create table if not exists cards (
   id text primary key, tipo text, topico text, subtopico text,
   dificuldade int, tags text, fonte text, enunciado text, opcoes text,
-  correta int, frente text, verso text, explicacao text, imagem text);
+  correta int, frente text, verso text, explicacao text, imagem text, owner text);
 create table if not exists progress (
   user_id text, card_id text, state text, step int, stability real,
   difficulty real, reps int, lapses int, due text, last text,
@@ -216,7 +219,7 @@ create table if not exists audit_log (
 """
 
 _CARD_COLS = ["id", "tipo", "topico", "subtopico", "dificuldade", "tags", "fonte",
-              "enunciado", "opcoes", "correta", "frente", "verso", "explicacao", "imagem"]
+              "enunciado", "opcoes", "correta", "frente", "verso", "explicacao", "imagem", "owner"]
 
 
 class LocalStore:
@@ -234,6 +237,10 @@ class LocalStore:
                     pass
             try:
                 c.execute("alter table cards add column imagem text")
+            except sqlite3.OperationalError:
+                pass
+            try:
+                c.execute("alter table cards add column owner text")
             except sqlite3.OperationalError:
                 pass
             c.execute("create table if not exists flags (id integer primary key autoincrement, "
@@ -267,6 +274,10 @@ class LocalStore:
                     f"insert or replace into cards ({','.join(_CARD_COLS)}) "
                     f"values ({','.join('?' * len(_CARD_COLS))})",
                     [row[k] for k in _CARD_COLS])
+
+    def delete_card(self, card_id):
+        with self._conn() as c:
+            c.execute("delete from cards where id=?", (card_id,))
 
     # ---- progress
     def get_progress(self, user):
@@ -455,7 +466,7 @@ class LocalStore:
 # ============================================================ factory
 @st.cache_resource
 def get_store():
-    _store_schema_version = "2"  # bump quando mudar métodos das stores (invalida este cache_resource)
+    _store_schema_version = "3"  # bump quando mudar métodos das stores (invalida este cache_resource)
     url, key = _secret("SUPABASE_URL"), _secret("SUPABASE_KEY")
     if url and key:
         try:
@@ -468,6 +479,11 @@ def get_store():
 @st.cache_data(ttl=120)
 def cached_cards():
     return get_store().get_cards()
+
+
+def user_cards(user):
+    """Cards visíveis para o usuário: os compartilhados (sem dono) + os dele."""
+    return [c for c in cached_cards() if not c.get("owner") or c.get("owner") == user]
 
 
 def clear_card_cache():

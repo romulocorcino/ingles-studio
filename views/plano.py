@@ -7,10 +7,11 @@ import streamlit as st
 from core import analytics, ui
 from core.content import EXAM_DEFAULT_DATE, EXAM_QUESTIONS, EXAM_SESSION_MIN, TOPIC_WEIGHTS
 from core.db import cached_cards, get_store
+from core.db import user_cards
 
 store = get_store()
 user = st.session_state["user"]
-cards = cached_cards()
+cards = user_cards(user)
 settings = st.session_state.get("settings", {})
 
 st.title("📅 Study plan")

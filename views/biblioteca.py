@@ -9,10 +9,11 @@ import streamlit as st
 from core import scheduler, ui
 from core.content import TOPIC_ABBREV
 from core.db import APP_DIR, cached_cards, get_store
+from core.db import user_cards
 
 store = get_store()
 user = st.session_state["user"]
-cards = cached_cards()
+cards = user_cards(user)
 UTC = dt.timezone.utc
 
 st.title("📖 Library — the whole deck at a glance")

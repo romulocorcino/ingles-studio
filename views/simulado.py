@@ -10,10 +10,11 @@ import streamlit as st
 from core import ui
 from core.content import MPS_BAND, SECONDS_PER_QUESTION
 from core.db import cached_cards, get_store
+from core.db import user_cards
 
 store = get_store()
 user = st.session_state["user"]
-cards = cached_cards()
+cards = user_cards(user)
 ss = st.session_state
 
 st.title("📝 Timed level test")

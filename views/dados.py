@@ -7,10 +7,11 @@ import pandas as pd
 import streamlit as st
 
 from core.db import APP_DIR, cached_cards, clear_card_cache, get_store
+from core.db import user_cards
 
 store = get_store()
 user = st.session_state["user"]
-cards = cached_cards()
+cards = user_cards(user)
 
 st.title("⚙️ Data & sync")
 
