@@ -136,6 +136,45 @@ class SupabaseStore:
         except Exception:
             pass
 
+    # ---- auth: contas, solicitações de acesso, auditoria
+    def get_app_user(self, email):
+        r = self.client.table("app_users").select("*").eq("email", email).execute().data
+        return r[0] if r else None
+
+    def upsert_app_user(self, row):
+        self.client.table("app_users").upsert(row, on_conflict="email").execute()
+
+    def delete_app_user(self, email):
+        self.client.table("app_users").delete().eq("email", email).execute()
+
+    def list_app_users(self):
+        return self.client.table("app_users").select(
+            "email,name,role,level,active,must_change_pw,created_at").order("created_at").execute().data or []
+
+    def add_access_request(self, row):
+        self.client.table("access_requests").insert(row).execute()
+
+    def list_access_requests(self, status=None):
+        q = self.client.table("access_requests").select("*").order("ts", desc=True)
+        if status:
+            q = q.eq("status", status)
+        return q.execute().data or []
+
+    def update_access_request(self, req_id, status):
+        self.client.table("access_requests").update({"status": status}).eq("id", req_id).execute()
+
+    def log_audit(self, actor, action, target=""):
+        try:
+            self.client.table("audit_log").insert({"actor": actor, "action": action, "target": target}).execute()
+        except Exception:
+            pass
+
+    def list_audit(self, limit=200):
+        try:
+            return self.client.table("audit_log").select("*").order("ts", desc=True).limit(limit).execute().data or []
+        except Exception:
+            return []
+
 
 # ============================================================ SQLite local
 _LOCAL_SCHEMA = """
@@ -164,6 +203,16 @@ create table if not exists mocks (
 create table if not exists settings (
   user_id text primary key, exam_date text, retention real, daily_new int,
   daily_goal int, updated_at text);
+create table if not exists app_users (
+  email text primary key, name text, password_hash text, role text default 'user',
+  level text default '', active int default 1, must_change_pw int default 0,
+  failed_attempts int default 0, locked_until text, created_at text);
+create table if not exists access_requests (
+  id integer primary key autoincrement, email text, name text, message text,
+  status text default 'pending', ts text default (datetime('now')));
+create table if not exists audit_log (
+  id integer primary key autoincrement, actor text, action text, target text,
+  ts text default (datetime('now')));
 """
 
 _CARD_COLS = ["id", "tipo", "topico", "subtopico", "dificuldade", "tags", "fonte",
@@ -336,6 +385,71 @@ class LocalStore:
                 "insert or replace into settings (user_id,exam_date,retention,daily_new,daily_goal,updated_at) "
                 "values (?,?,?,?,?,?)",
                 [user] + [settings.get(k) for k in keys] + [self._ts()])
+
+    # ---- auth
+    def get_app_user(self, email):
+        with self._conn() as c:
+            r = c.execute("select * from app_users where email=?", (email,)).fetchone()
+        if not r:
+            return None
+        d = dict(r)
+        d["active"] = bool(d.get("active"))
+        d["must_change_pw"] = bool(d.get("must_change_pw"))
+        return d
+
+    def upsert_app_user(self, row):
+        cols = ["email", "name", "password_hash", "role", "level", "active",
+                "must_change_pw", "failed_attempts", "locked_until", "created_at"]
+        r = {k: row.get(k) for k in cols}
+        r["active"] = 1 if r.get("active", True) else 0
+        r["must_change_pw"] = 1 if r.get("must_change_pw") else 0
+        with self._conn() as c:
+            c.execute(
+                f"insert or replace into app_users ({','.join(cols)}) values ({','.join('?' * len(cols))})",
+                [r[k] for k in cols])
+
+    def delete_app_user(self, email):
+        with self._conn() as c:
+            c.execute("delete from app_users where email=?", (email,))
+
+    def list_app_users(self):
+        with self._conn() as c:
+            rows = [dict(x) for x in c.execute(
+                "select email,name,role,level,active,must_change_pw,created_at "
+                "from app_users order by created_at").fetchall()]
+        for d in rows:
+            d["active"] = bool(d.get("active"))
+            d["must_change_pw"] = bool(d.get("must_change_pw"))
+        return rows
+
+    def add_access_request(self, row):
+        with self._conn() as c:
+            c.execute("insert into access_requests (email,name,message,status,ts) values (?,?,?,?,?)",
+                      (row.get("email"), row.get("name"), row.get("message"),
+                       row.get("status", "pending"), self._ts()))
+
+    def list_access_requests(self, status=None):
+        with self._conn() as c:
+            if status:
+                rows = c.execute("select * from access_requests where status=? order by ts desc",
+                                 (status,)).fetchall()
+            else:
+                rows = c.execute("select * from access_requests order by ts desc").fetchall()
+        return [dict(x) for x in rows]
+
+    def update_access_request(self, req_id, status):
+        with self._conn() as c:
+            c.execute("update access_requests set status=? where id=?", (status, req_id))
+
+    def log_audit(self, actor, action, target=""):
+        with self._conn() as c:
+            c.execute("insert into audit_log (actor,action,target,ts) values (?,?,?,?)",
+                      (actor, action, target, self._ts()))
+
+    def list_audit(self, limit=200):
+        with self._conn() as c:
+            return [dict(x) for x in c.execute(
+                "select * from audit_log order by ts desc limit ?", (limit,)).fetchall()]
 
 
 # ============================================================ factory
