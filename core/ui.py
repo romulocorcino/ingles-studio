@@ -9,11 +9,13 @@ import streamlit.components.v1 as components
 CSS = """
 <style>
 :root {
-  --accent: #4C9AFF;
-  --surface: #151A23;
-  --surface-2: #1C2330;
-  --line: rgba(120, 140, 170, .22);
-  --ok: #3FB950; --warn: #E3B341; --bad: #F85149;
+  --accent: #3B82F6;
+  --accent-2: #22D3EE;
+  --surface: #121A2A;
+  --surface-2: #18233A;
+  --line: rgba(120, 145, 185, .18);
+  --ok: #34D399; --warn: #FBBF24; --bad: #F87171;
+  --muted: #93A4BD;
 }
 
 /* ---- general ---- */
@@ -124,11 +126,70 @@ button[role="tab"][aria-selected="true"] { color: var(--accent) !important; }
 /* rating buttons fill their column */
 div[data-testid="column"] .stButton button { width: 100%; border-radius: 10px; }
 .stButton button[kind="primary"] { font-weight: 700; }
+
+/* ============ professional polish ============ */
+html, body, .stApp, [class*="css"] {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.stApp {
+  background:
+    radial-gradient(1100px 520px at 85% -8%, rgba(59,130,246,.10), transparent),
+    radial-gradient(900px 500px at -6% 108%, rgba(34,211,238,.06), transparent),
+    var(--background-color, #0A0F1A);
+}
+h1 { font-weight: 800; letter-spacing: -.4px; }
+h2, h3 { font-weight: 700; letter-spacing: -.2px; }
+
+/* primary + submit buttons: gradient with lift */
+.stButton button[kind="primary"], .stFormSubmitButton button {
+  background: linear-gradient(135deg, var(--accent), #2563EB) !important;
+  border: none !important; color: #fff !important; font-weight: 700 !important;
+  box-shadow: 0 6px 18px rgba(37,99,235,.30); transition: transform .1s ease, box-shadow .2s ease;
+}
+.stButton button[kind="primary"]:hover, .stFormSubmitButton button:hover {
+  transform: translateY(-1px); box-shadow: 0 10px 24px rgba(37,99,235,.42);
+}
+.stButton button, .stFormSubmitButton button { border-radius: 11px; }
+.stButton button[kind="secondary"] { border: 1px solid var(--line); }
+
+/* inputs & selects */
+[data-testid="stTextInput"] input, [data-testid="stNumberInput"] input,
+.stTextArea textarea, [data-baseweb="select"] > div {
+  border-radius: 10px !important;
+}
+[data-testid="stTextInput"] input:focus {
+  border-color: var(--accent) !important; box-shadow: 0 0 0 2px rgba(59,130,246,.25) !important;
+}
+
+/* metric cards */
+[data-testid="stMetric"] { box-shadow: 0 4px 16px rgba(0,0,0,.28); }
+
+/* tabs underline accent */
+.stTabs [data-baseweb="tab-highlight"] { background: var(--accent) !important; }
+
+/* study card: crisper */
+.study-card { box-shadow: 0 8px 26px rgba(0,0,0,.35); }
+
+/* login / auth screen */
+.auth-head { text-align: center; margin: .4rem 0 1.3rem; }
+.auth-logo {
+  width: 64px; height: 64px; border-radius: 17px; margin: 0 auto .8rem;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; font-weight: 800; color: #fff; letter-spacing: .5px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 12px 28px rgba(59,130,246,.42);
+}
+.auth-title { font-size: 1.75rem; font-weight: 800; letter-spacing: -.5px; }
+.auth-sub { color: var(--muted); font-size: .92rem; margin-top: .3rem; }
 </style>
 """
 
 
 def inject_css():
+    # a fonte precisa vir num @import no topo do próprio <style> para ser válida
+    st.markdown("<style>@import url('https://fonts.googleapis.com/css2?"
+                "family=Inter:wght@400;500;600;700;800&display=swap');</style>",
+                unsafe_allow_html=True)
     st.markdown(CSS, unsafe_allow_html=True)
 
 

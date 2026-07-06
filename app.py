@@ -9,7 +9,7 @@ from core import analytics, auth, ui
 from core.content import EXAM_DEFAULT_DATE
 from core.db import cached_cards, clear_card_cache, get_store
 
-st.set_page_config(page_title="English Studio", page_icon="🇬🇧",
+st.set_page_config(page_title="English Studio", page_icon="🎓",
                    layout="wide", initial_sidebar_state="expanded")
 ui.inject_css()
 
@@ -25,62 +25,87 @@ if not cached_cards():
 
 
 # ============================================================ LOGIN GATE
+def _auth_header(logo, title, sub):
+    st.markdown("<style>.block-container{max-width:560px !important;padding-top:2.4rem}</style>",
+                unsafe_allow_html=True)
+    st.markdown(f"<div class='auth-head'><div class='auth-logo'>{logo}</div>"
+                f"<div class='auth-title'>{title}</div>"
+                f"<div class='auth-sub'>{sub}</div></div>", unsafe_allow_html=True)
+
+
 def _login_screen():
-    st.markdown("<div style='max-width:460px;margin:2rem auto'>", unsafe_allow_html=True)
-    st.title("🇬🇧 English Studio")
-    st.caption("Entre com sua conta para estudar. Seu progresso é pessoal e sincronizado.")
-    tab_in, tab_req = st.tabs(["🔑 Entrar", "🙋 Solicitar acesso"])
+    _auth_header("EN", "English Studio",
+                 "Aprenda inglês com repetição espaçada e pronúncia nativa")
+    with st.container(border=True):
+        tab_in, tab_req, tab_pw = st.tabs(["🔑 Entrar", "🙋 Solicitar acesso", "🔒 Trocar senha"])
 
-    with tab_in:
-        with st.form("login_form"):
-            email = st.text_input("E-mail")
-            pw = st.text_input("Senha", type="password")
-            if st.form_submit_button("Entrar", type="primary", use_container_width=True):
-                user, err = auth.authenticate(store, email, pw)
-                if err:
-                    st.error(err)
-                else:
-                    st.session_state["auth_email"] = auth.normalize_email(email)
-                    st.rerun()
+        with tab_in:
+            with st.form("login_form"):
+                email = st.text_input("E-mail")
+                pw = st.text_input("Senha", type="password")
+                if st.form_submit_button("Entrar", type="primary", use_container_width=True):
+                    user, err = auth.authenticate(store, email, pw)
+                    if err:
+                        st.error(err)
+                    else:
+                        st.session_state["auth_email"] = auth.normalize_email(email)
+                        st.rerun()
 
-    with tab_req:
-        st.caption("Não tem conta? Peça acesso ao administrador — você recebe o login quando for aprovado.")
-        with st.form("req_form"):
-            name = st.text_input("Seu nome")
-            remail = st.text_input("Seu e-mail")
-            level = st.selectbox("Seu nível de inglês", ["Iniciante", "Intermediário", "Avançado", "Não sei"])
-            msg = st.text_area("Mensagem (opcional)", placeholder="Conte por que quer usar o app…", height=80)
-            if st.form_submit_button("Enviar solicitação", type="primary", use_container_width=True):
-                err = auth.request_access(store, remail, name, f"[nível: {level}] {msg}".strip())
-                if err:
-                    st.warning(err)
-                else:
-                    st.success("Solicitação enviada! ✅ O administrador vai avaliar e liberar seu acesso.")
-    st.markdown("</div>", unsafe_allow_html=True)
+        with tab_req:
+            st.caption("Não tem conta? Peça acesso — você recebe o login quando for aprovado.")
+            with st.form("req_form"):
+                name = st.text_input("Seu nome")
+                remail = st.text_input("Seu e-mail")
+                level = st.selectbox("Seu nível de inglês", ["Iniciante", "Intermediário", "Avançado", "Não sei"])
+                msg = st.text_area("Mensagem (opcional)", placeholder="Conte por que quer usar o app…", height=80)
+                if st.form_submit_button("Enviar solicitação", type="primary", use_container_width=True):
+                    err = auth.request_access(store, remail, name, f"[nível: {level}] {msg}".strip())
+                    if err:
+                        st.warning(err)
+                    else:
+                        st.success("Solicitação enviada! ✅ O administrador vai avaliar e liberar seu acesso.")
+
+        with tab_pw:
+            st.caption("Troque sua senha informando a senha atual (sem precisar entrar).")
+            with st.form("pw_change_form"):
+                pemail = st.text_input("E-mail", key="pwc_email")
+                oldp = st.text_input("Senha atual", type="password")
+                newp = st.text_input("Nova senha", type="password",
+                                    help=f"Mínimo {auth.MIN_PW} caracteres, com letras e números.")
+                newp2 = st.text_input("Confirme a nova senha", type="password")
+                if st.form_submit_button("Trocar senha", type="primary", use_container_width=True):
+                    if newp != newp2:
+                        st.error("As senhas não conferem.")
+                    else:
+                        err = auth.change_password(store, pemail, oldp, newp)
+                        if err:
+                            st.error(err)
+                        else:
+                            st.success("Senha alterada com sucesso ✅ Entre pela aba '🔑 Entrar'.")
 
 
 def _force_change_screen(user):
-    st.markdown("<div style='max-width:460px;margin:2rem auto'>", unsafe_allow_html=True)
-    st.title("🔐 Defina sua senha")
-    st.info("Por segurança, troque a senha inicial antes de continuar.")
-    with st.form("force_change"):
-        new = st.text_input("Nova senha", type="password", help=f"Mínimo {auth.MIN_PW} caracteres, com letras e números.")
-        new2 = st.text_input("Confirme a nova senha", type="password")
-        if st.form_submit_button("Salvar e entrar", type="primary", use_container_width=True):
-            if new != new2:
-                st.error("As senhas não conferem.")
-            else:
-                err = auth.set_password(store, user["email"], new, must_change=False)
-                if err:
-                    st.error(err)
+    _auth_header("🔐", "Defina sua senha",
+                 "Por segurança, troque a senha inicial antes de continuar")
+    with st.container(border=True):
+        with st.form("force_change"):
+            new = st.text_input("Nova senha", type="password",
+                                help=f"Mínimo {auth.MIN_PW} caracteres, com letras e números.")
+            new2 = st.text_input("Confirme a nova senha", type="password")
+            if st.form_submit_button("Salvar e entrar", type="primary", use_container_width=True):
+                if new != new2:
+                    st.error("As senhas não conferem.")
                 else:
-                    store.log_audit(user["email"], "password_change_forced", "")
-                    st.success("Senha definida! Entrando…")
-                    st.rerun()
-    if st.button("Sair"):
-        st.session_state.pop("auth_email", None)
-        st.rerun()
-    st.markdown("</div>", unsafe_allow_html=True)
+                    err = auth.set_password(store, user["email"], new, must_change=False)
+                    if err:
+                        st.error(err)
+                    else:
+                        store.log_audit(user["email"], "password_change_forced", "")
+                        st.success("Senha definida! Entrando…")
+                        st.rerun()
+        if st.button("Sair"):
+            st.session_state.pop("auth_email", None)
+            st.rerun()
 
 
 # resolve sessão
@@ -101,7 +126,7 @@ user = st.session_state["user"]
 
 # ---------------- global sidebar ----------------
 with st.sidebar:
-    st.title("🇬🇧 English Studio")
+    st.title("🎓 English Studio")
     role_badge = "👑 Admin" if auth.is_admin(current) else "👤 Aluno"
     st.markdown(f"**{current.get('name') or user}**  \n<span class='badge blue'>{role_badge}</span>  "
                 f"<span class='badge'>{user}</span>", unsafe_allow_html=True)
