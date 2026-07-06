@@ -1855,7 +1855,7 @@
     "I seen him yesterday."
    ],
    "correta": 1,
-   "explicacao": "Com tempo definido ('yesterday') use o Past Simple: *saw*."
+   "explicacao": "Verbo: com um tempo definido no passado ('yesterday') usa-se o **Past Simple** (saw). 'have seen' (present perfect) não combina com tempo definido."
   },
   {
    "id": "gra-pre-q002",
@@ -1872,7 +1872,7 @@
     "have lived"
    ],
    "correta": 2,
-   "explicacao": "Ação que começou no passado e continua: Present Perfect com 'for'."
+   "explicacao": "Verbo: ação que começou no passado e **continua até agora** → **Present Perfect** (have/has + particípio): *have lived*. 'for' marca a duração."
   },
   {
    "id": "gra-pre-q003",
@@ -1889,7 +1889,7 @@
     "on"
    ],
    "correta": 1,
-   "explicacao": "'good at + -ing' é a colocação correta."
+   "explicacao": "Preposição + verbo: 'be **good at** + **-ing**': *good at **playing***."
   },
   {
    "id": "gra-art-q004",
@@ -1906,7 +1906,7 @@
     "the"
    ],
    "correta": 1,
-   "explicacao": "'an' antes de som de vogal (umbrella começa com /ʌ/)."
+   "explicacao": "Artigo: usa-se **an** antes de **som de vogal**. 'umbrella' começa com o som /ʌ/ → **an** umbrella."
   },
   {
    "id": "gra-qua-q005",
@@ -1923,7 +1923,7 @@
     "many"
    ],
    "correta": 1,
-   "explicacao": "Em frases negativas usa-se 'any'."
+   "explicacao": "Substantivo/quantificador: em **negativas e perguntas** usa-se **any**; em afirmativas, **some**."
   },
   {
    "id": "voc-fal-q006",
@@ -2076,7 +2076,7 @@
     "were"
    ],
    "correta": 2,
-   "explicacao": "2nd conditional (hipotético): 'were' para todas as pessoas."
+   "explicacao": "Verbo: no **2nd conditional** (situação hipotética/irreal) usa-se **were** para todas as pessoas: *if I **were** rich...*"
   },
   {
    "id": "gra-ger-q015",
@@ -2093,7 +2093,7 @@
     "listening"
    ],
    "correta": 2,
-   "explicacao": "'enjoy' é seguido de gerúndio (-ing)."
+   "explicacao": "Verbo: depois de **enjoy** (e like/avoid/finish) usa-se **-ing**: *enjoy **listening***. Já want/need pedem 'to + verbo'."
   },
   {
    "id": "eve-pho-f159",
@@ -3441,7 +3441,7 @@
     "at"
    ],
    "correta": 1,
-   "explicacao": "'interested in + -ing'."
+   "explicacao": "Preposição fixa: 'be **interested in** + **-ing**': *interested in **learning***."
   },
   {
    "id": "gra-pre-q017",
@@ -3458,7 +3458,7 @@
     "at"
    ],
    "correta": 1,
-   "explicacao": "'married to' (não 'married with')."
+   "explicacao": "Preposição fixa: 'be **married to** somebody' (nunca 'married with')."
   },
   {
    "id": "gra-pre-q018",
@@ -3475,7 +3475,7 @@
     "in"
    ],
    "correta": 0,
-   "explicacao": "'arrive at' um lugar específico; 'arrive in' cidade/país."
+   "explicacao": "Preposição: **arrive at** (lugar específico: at the airport); **arrive in** (cidade/país). Nunca 'arrive to'."
   },
   {
    "id": "gra-pre-q019",
@@ -3492,7 +3492,7 @@
     "on"
    ],
    "correta": 2,
-   "explicacao": "'on' para dias da semana."
+   "explicacao": "Preposição de tempo: **on** para dias/datas (on Monday); **at** para horas; **in** para meses/anos."
   },
   {
    "id": "gra-pre-q020",
@@ -3509,7 +3509,7 @@
     "in"
    ],
    "correta": 0,
-   "explicacao": "'at' para horas."
+   "explicacao": "Preposição de tempo: **at** para horas (at 3 p.m.); **on** para dias; **in** para meses/anos."
   },
   {
    "id": "gra-art-q021",
@@ -3526,7 +3526,7 @@
     "the"
    ],
    "correta": 1,
-   "explicacao": "'an' antes de som de vogal ('h' mudo em honest)."
+   "explicacao": "Artigo: vale o **som**, não a letra. 'honest' tem **h mudo** (começa com som de vogal) → **an** honest person."
   },
   {
    "id": "gra-ten-q022",
@@ -3543,7 +3543,7 @@
     "rained"
    ],
    "correta": 1,
-   "explicacao": "Ação agora → present continuous."
+   "explicacao": "Verbo: 'Look!' mostra algo acontecendo **agora** → **Present Continuous** (be + verbo-ing): *is raining*."
   },
   {
    "id": "gra-ten-q023",
@@ -3560,7 +3560,7 @@
     "had started"
    ],
    "correta": 2,
-   "explicacao": "Ação anterior a outra no passado → past perfect."
+   "explicacao": "Verbo: a ação que aconteceu **antes** de outra no passado vai para o **Past Perfect** (had + particípio): *had started*. 'started' seria ao mesmo tempo."
   },
   {
    "id": "gra-ten-q024",
@@ -3577,7 +3577,7 @@
     "don't see"
    ],
    "correta": 1,
-   "explicacao": "'since' → present perfect."
+   "explicacao": "Verbo: **since** (desde + um ponto no tempo) pede **Present Perfect**: *haven't seen*. Passado simples não combina com 'since'."
   },
   {
    "id": "gra-con-q025",
@@ -3594,7 +3594,7 @@
     "would melt"
    ],
    "correta": 0,
-   "explicacao": "Fato/verdade geral → zero conditional (present)."
+   "explicacao": "Verbo: para fatos/verdades gerais usa-se o **Zero Conditional** — 'if + presente, presente': *if you heat ice, it **melts***."
   },
   {
    "id": "gra-mod-q026",
@@ -3611,7 +3611,7 @@
     "shouldn't"
    ],
    "correta": 0,
-   "explicacao": "'mustn't' = proibido."
+   "explicacao": "Verbo modal: **mustn't** = proibição (não pode). 'don't have to' seria 'não é obrigatório' — sentido diferente."
   },
   {
    "id": "gra-mod-q027",
@@ -3628,7 +3628,7 @@
     "can't"
    ],
    "correta": 1,
-   "explicacao": "'don't have to' = não é obrigatório."
+   "explicacao": "Verbo modal: **don't have to** = não é obrigatório (opcional). 'mustn't' seria proibido."
   },
   {
    "id": "gra-qua-q028",
@@ -3645,7 +3645,7 @@
     "some"
    ],
    "correta": 1,
-   "explicacao": "'money' é incontável → 'much'."
+   "explicacao": "Substantivo: **money** é **incontável** (não tem plural), então usa-se **much**. 'many' é só para contáveis no plural."
   },
   {
    "id": "gra-qua-q029",
@@ -3662,7 +3662,7 @@
     "few"
    ],
    "correta": 1,
-   "explicacao": "'people' é contável no plural → 'many'."
+   "explicacao": "Substantivo: **people** é o plural de 'person' = **contável**, então **many**. 'much' é só para incontáveis."
   },
   {
    "id": "gra-com-q030",
@@ -3679,7 +3679,7 @@
     "most difficult"
    ],
    "correta": 1,
-   "explicacao": "Adjetivo longo → 'more + adj'."
+   "explicacao": "Comparativo: adjetivos **longos** (2+ sílabas) usam **more + adjetivo**: *more difficult*. Curtos levam **-er**."
   },
   {
    "id": "gra-com-q031",
@@ -3696,7 +3696,7 @@
     "fastest"
    ],
    "correta": 1,
-   "explicacao": "Comparativo curto → -er."
+   "explicacao": "Comparativo: adjetivos/advérbios **curtos** levam **-er**: fast → **faster** (+ than)."
   },
   {
    "id": "gra-sup-q032",
@@ -3713,7 +3713,7 @@
     "best"
    ],
    "correta": 2,
-   "explicacao": "Superlativo irregular de 'good' → 'best'."
+   "explicacao": "Superlativo: **good** é irregular → good / better / **best** (the best)."
   },
   {
    "id": "gra-ger-q033",
@@ -3730,7 +3730,7 @@
     "buying"
    ],
    "correta": 1,
-   "explicacao": "'need' + to + verbo."
+   "explicacao": "Verbo: depois de **need/want/decide** vem **to + verbo** (infinitivo): *need **to buy***."
   },
   {
    "id": "gra-ger-q034",
@@ -3747,7 +3747,7 @@
     "solving"
    ],
    "correta": 2,
-   "explicacao": "Após preposição ('at') → gerúndio."
+   "explicacao": "Verbo: depois de **preposição** (at, in, of, about...) o verbo vira **-ing** (gerúndio): *good at **solving***."
   },
   {
    "id": "gra-que-q035",
@@ -3764,7 +3764,7 @@
     "don't you"
    ],
    "correta": 1,
-   "explicacao": "Afirmativa → tag negativa."
+   "explicacao": "Verbo: frase **afirmativa** leva **question tag negativa**, repetindo o auxiliar: *You're coming, **aren't you?***"
   },
   {
    "id": "gra-use-q036",
@@ -3781,7 +3781,7 @@
     "am used to"
    ],
    "correta": 1,
-   "explicacao": "'used to' para hábito passado."
+   "explicacao": "Verbo: **used to + verbo** = hábito no passado que não acontece mais: *I **used to** play*. (Com 'did' vira 'use to'.)"
   },
   {
    "id": "voc-wor-q037",
@@ -3798,7 +3798,7 @@
     "take"
    ],
    "correta": 0,
-   "explicacao": "'do a favor'."
+   "explicacao": "Colocação: **do** para tarefas/atividades → *do a favor, do the dishes*. (make = criar/produzir.)"
   },
   {
    "id": "voc-wor-q038",
@@ -3815,7 +3815,7 @@
     "take"
    ],
    "correta": 1,
-   "explicacao": "'make a decision'."
+   "explicacao": "Colocação: **make** para criar/produzir → *make a decision, make dinner*. (do = tarefas.)"
   },
   {
    "id": "voc-wor-q039",
@@ -3832,7 +3832,7 @@
     "gains"
    ],
    "correta": 1,
-   "explicacao": "'earn money' = ganhar dinheiro (trabalho)."
+   "explicacao": "Vocabulário: **earn** = ganhar (dinheiro trabalhando). 'win' = ganhar competição/prêmio; 'gain' = adquirir (peso, experiência)."
   },
   {
    "id": "voc-wor-q040",
@@ -3900,7 +3900,7 @@
     "were"
    ],
    "correta": 1,
-   "explicacao": "'information' é incontável → verbo singular."
+   "explicacao": "Substantivo: **information** é **incontável** → verbo no **singular** (*is*) e sem 'a/an' nem plural."
   },
   {
    "id": "voc-syn-q044",
